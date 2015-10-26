@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="../stylesheets/blog.css" type="text/css" rel="stylesheet">
+		<meta charset="UTF-8">
+		<title>Let's Talk Tech</title>
+	</head>
+
+	<body>
+		<div class="blog-header">
+			<h3>Alan Alcesto: Let's Talk Tech</h3>
+			<a href="https://www.facebook.com/alan.alcesto"> <img src="../imgs/facebook.png"/></a> 
+			<a href="https://github.com/aalcesto23"> <img src="../imgs/github.png"/></a> 
+			<a href="https://www.linkedin.com/in/aalcesto"> <img src="../imgs/linkedin.png"/></a>
+			<div>
+				<a href="http://aalcesto23.github.io/">Home</a>
+			</div>
+			<h1>Arrays and a Side of Hashes</h1>
+			<h5>10/25/2015</h5>
+		</div>
+		<section class="blog-entry">
+   			<p>
+               Your machine can do amazing things using Ruby. Ruby can store large amounts of data that can be looked up at any given moment. The way Ruby can do this is through arrays and hashes. Though they operate similarly there are some key differences.
+			</p>
+			<p>
+				One way to think of arrays is as an ordered list. By ordered list I mean items within an array are ordered by index number. Each object within an array is assigned to an index number, the first item starting at [0], proceeding down the line of objects. As you can see from the example below, we have our array called grocery_list. I know what you are thinking, "Who only survives on ice cream, candy, and toilet paper?" For the sake of learning, lets look past that for a moment. As you can see our array consist of three objects. The first item, 'ice cream' is assigned the index number [0], the second [1], and the third [2].
+			</p>
+			<p class="code">
+				grocery_list = ["ice cream", "candy", "toilet paper"]
+			</p>
+			<p class="code">
+				<ul class="code">
+					<li>puts grocery_list[0]</li>
+					<li>puts grocery_list[1]</li>
+					<li>puts grocery_list[2]</li>
+				</ul>
+			</p>
+
+			<p>
+				As you can see the name of our array is grocery_list which contains the three objects: ice cream, candy, and toilet paper within []. You can call these objects by typing out the name of the array with the corresponding index number within [], you can see this from the image above, just below our array we are calling all three objects.
+			</p>
+			<p>
+				You can almost list anything as an object within an array: Strings, Integers, Symbols, other array objects, and even hashes. Arrays can have repeating objects as well, which is an important thing to remember when talking about hashes, but we will get to that in a moment. 
+			</p>
+			<p>
+				An easy way to think about hashes is a list of pairs. These pairs will consist of a key name and value. You will use the key name to return the value, much like you would return an object within an array with its corresponding index number. One rule to keep in mind is that the key name must be unique.
+				As you can see from the example listed below, we have a hash called grocery_list. Our hash has three key names corresponding to their value with a =>. In our example "ice cream" is the key name with the value of "vanilla". The key names and values go between {}. As mentioned earlier, the key name will be used to return the value. In the example we return each value by their key name below our hash.
+			</p>
+			<p class="code">
+				grocery_list = {"ice cream" => "vanilla", "candy" => "chocolate", "toiletries" => "toilet paper"}
+			</p>
+			<p class="code">
+				<ul class="code">
+					<li>puts grocery_list["ice cream"]</li>
+					<li>puts grocery_list["candy"]</li>
+					<li>puts grocery_list["toiletries"]</li>
+				</ul>
+			</p> 
+			<p>
+				Keep in mind that hash keys must be unique, as there cannot be duplicate keys within a hash. This can be useful if you have a long list of objects. Rather than having to remember what was the index number associated to an object, you can return it by remembering the key name.
+			</p>
+			<p>
+				Arrays and hashes are both powerful and versatile ways of storing and retrieving data. They are so versatile they can actually be used within each other, but that should probably be discussed in another conversation. For now, I hope this has been helpful in understanding these great tools!
+			</p>
+		</section>
+	<aside>
+    	<section class="blog-list">
+        <h3>Blog Post List</h3>
+	        <ul>
+	        	<li><a href="git.html">Version Control: Git & GitHub</a></li>
+	        	<li><a href="#">Post 2</a></li>
+	        	<li><a href="#">Post 3</a></li>
+	        	<li><a href="#">Post 4</a></li>
+	        	<li><a href="#">Post 5</a></li>
+	        	<li><a href="#">Post 6</a></li>
+	        	<li><a href="#">Post 7</a></li>
+	        </ul>
+    	</section>
+    </aside>
+<html>

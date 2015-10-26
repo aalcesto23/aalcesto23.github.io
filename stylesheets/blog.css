@@ -28,3 +28,8 @@ h3 {
   margin-right: 30%;
   margin-left: 30%;
 }
+.code{
+  color: black;
+  background-color: white;
+  list-style: none;
+}
