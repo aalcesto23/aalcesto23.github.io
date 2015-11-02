@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="../stylesheets/blog.css" type="text/css" rel="stylesheet">
+		<meta charset="UTF-8">
+		<title>Let's Talk Tech</title>
+	</head>
+
+	<body>
+		<div class="blog-header">
+			<h3>Alan Alcesto: Let's Talk Tech</h3>
+			<a href="https://www.facebook.com/alan.alcesto"> <img src="../imgs/facebook.png"/></a> 
+			<a href="https://github.com/aalcesto23"> <img src="../imgs/github.png"/></a> 
+			<a href="https://www.linkedin.com/in/aalcesto"> <img src="../imgs/linkedin.png"/></a>
+			<div>
+				<a href="http://aalcesto23.github.io/">Home</a>
+			</div>
+			<h1>Mapping Ruby Success</h1>
+			<h5>11/01/2015</h5>
+		</div>
+		<section class="blog-entry">
+   			<p>
+               In a previous blog post we talked about using hashes and arrays as a way to collect information within Ruby. To use your collections of data to their fullest potential, you will need to use Enumerable methods. In this blog post we will be focusing on the Enumerable method map, but before getting to that lets first talk about what an Enumerable is. Enumerables once again display the flexibility of Ruby. Enumerables allow you to write your code once and share it between other unrelated code, which comes from the idea of "mixins". As mentioned earlier, map is an Enumerable method.
+
+               Map allows you to go through, or iterate, a collection and apply changes to all the objects within the collection. Map will then return an array with the updated information. The changes will be listed within a block. If there is no block to house the changes you are applying, map will return the original enumerator instead.
+
+               To use map you will first need to write the name of the array followed by .map, as you can see in the example listed below. Following is a pair of {} to contain our block. Our block holds the changes we are applying to each item. In the example below we have n within ||. "n" is a variable that represents an object within our array and || lets us know that the changes will be applied to each item within the array. To the right of |n| we have the changes we are applying. In our example we are adding one to each item.
+			</p>
+			<p class="code">
+				array.map {|n| n+1}
+			</p>
+			<p>
+				To show you how this works we have our example array entitiled my_array. We use map to add 1 to each object within the array. As you can see in the third line it will return an array with the updated information, adding 1 to each item of the original array.
+			<p class="code">
+				<ul class="code">
+					<li> => my_array = [1, 2, 3, 4]</li>
+					<li> => my_array.map {|n| n+1}</li>
+					<li> => [2, 3, 4, 5]</li>
+				</ul>
+			</p> 
+			<p>
+				I hope this has been helpful in better understand how to use the map Enumerable method and showcase how versatile Enumerables can be when manipulating your collections!
+			</p>
+		</section>
+	<aside>
+    	<section class="blog-list">
+        <h3>Blog Post List</h3>
+	        <ul>
+	        	<li><a href="git.html">Version Control: Git & GitHub</a></li>
+	        	<li><a href="css-concepts.html">ID's vs Classes: The Eternal Struggle</a></li>
+	        	<li><a href="arrays-hashes.html">Arrays and a Side of Hashes</a></li>
+	        	<li><a href="#">Post 4</a></li>
+	        	<li><a href="#">Post 5</a></li>
+	        	<li><a href="#">Post 6</a></li>
+	        	<li><a href="#">Post 7</a></li>
+	        </ul>
+    	</section>
+    </aside>
+<html>
