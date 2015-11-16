@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<link href="../stylesheets/blog.css" type="text/css" rel="stylesheet">
+		<meta charset="UTF-8">
+		<title>Let's Talk Tech</title>
+	</head>
+
+	<body>
+		<div class="blog-header">
+			<h3>Alan Alcesto: Let's Talk Tech</h3>
+			<a href="https://www.facebook.com/alan.alcesto"> <img src="../imgs/facebook.png"/></a> 
+			<a href="https://github.com/aalcesto23"> <img src="../imgs/github.png"/></a> 
+			<a href="https://www.linkedin.com/in/aalcesto"> <img src="../imgs/linkedin.png"/></a>
+			<div>
+				<a href="http://aalcesto23.github.io/">Home</a>
+			</div>
+			<h1>Ruby Hashes vs. JavaScript Objects</h1>
+			<h5>11/15/2015</h5>
+		</div>
+		<section class="blog-entry">
+   			<p>
+               Like Ruby, JavaScrip has ways of storing a collection of data. One way you can store a collection of data in Ruby is through hashes. Hashes use a key and value index that allows you to call on the key to access the value within the hash. You can also create the hash using symbols. The nice thing about storing a collection in a hash is that you don't have to use a number index like you would in arrays, but instead you can use any object type as your index. Similar to hashes in Ruby, in JavaScript you have objects. Objects are containers for named values. These named values are called properties. Objects, like hashes, do not use a number index. Though objects and hashes are very similar, there are differences in their structure and syntax, but rather than telling you, I have listed both an object and hash below. I used the same information on both the hash and object.
+			</p>
+			<p class="code">
+				//JavaScript Object
+			</p>
+			<p class="code">
+				<ul class="code">
+					<li>var person = {</li>
+						<ul class="code">
+							<li>firstName: "Alan"</li>
+							<li>lastName: "Alcesto"</li>
+							<li>age: 24</li>
+						</ul>
+					<li>};</li>
+				</ul>
+			</p>
+			<p class="code">
+				//Ruby Hash (symbol index)
+			</p>
+			<p class="code">
+				<ul class="code">
+					<li> person = {first_name: "Alan", last_name: "Alcesto", age: 24}</li>
+				</ul>
+			</p>
+			<p>
+				Below is an example of how you would access a property within an object and a value within a hash. In the example they will both return "Alan".
+			</p>
+			<p class="code">
+				//JavaScrip Object
+			</p>
+			<p class="code">
+				person.firstName
+			</p>
+			<p class="code">
+				//Ruby Hash (symbol index)
+			</p>
+			<p class="code">
+				person[:first_name]
+			</p>
+			<p>
+				As you can see from the examples listed above that they work very similarly. Of course, there are some subtle differences due to the syntax that comes with their respective languages. Both are great ways of containing a collection of data. Hopefully this has been helpful in understanding the similarities and differences between Ruby hashes and JavaScript Objects.
+			</p>
+		</section>
+	<aside>
+    	<section class="blog-list">
+        <h3>Blog Post List</h3>
+	        <ul>
+	        	<li><a href="git.html">Version Control: Git & GitHub</a></li>
+	        	<li><a href="css-concepts.html">ID's vs Classes: The Eternal Struggle</a></li>
+	        	<li><a href="arrays-hashes.html">Arrays and a Side of Hashes</a></li>
+	        	<li><a href="enumerable-methods.html">Mapping Ruby Success</a></li>
+	        	<li><a href="ruby-classes.html">Ruby Class is in Session</a></li>
+	        	<li><a href="#">Post 6</a></li>
+	        	<li><a href="#">Post 7</a></li>
+	        </ul>
+    	</section>
+    </aside>
+<html>
