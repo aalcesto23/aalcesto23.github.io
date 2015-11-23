@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="../stylesheets/cheat-sheet.css" type="text/css" rel="stylesheet">
+		<meta charset="UTF-8">
+	</head>
+		
+	<body>
+		<header class="name">
+			<h1>Alan's Dev Life</h1>
+		</header>
+		<nav class="nav-bar">
+			<div>
+				<a href="../about-me/about-me.html">About Me</a> | 
+				<a href="index.html">Projects</a> | 
+				<a href="../blog/index.html">Blog</a> | 
+				<a href="../contact-page/contact_page.html">Contact Info</a>
+			</div>
+		</nav>
+		<div class="home-button">
+			<a href="http://aalcesto23.github.io/">Home</a>
+		</div>
+		<div>
+	        <h1>Mac Terminal Cheat Sheet</h1>
+	        <h2>Short Cuts</h2>
+	        <table>
+				<tr>
+		    		<th>Terminal Commands</th>
+			    	<th>Definitions and Use</th>
+				</tr>
+				<tr >
+			    	<td>Ctrl + A</td>
+			    	<td>Go to the beginning of the line you are currently typing on</td>
+				</tr>
+				<tr>
+			    	<td>Ctrl + E</td>
+			    	<td>Go to the end of the line you are currently typing on</td>
+				</tr>
+				<tr>
+			    	<td>Ctrl + L</td>
+			    	<td>Clears the Screen</td>
+				</tr>
+				<tr>
+			    	<td>Command + K</td>
+			    	<td>Clears the Screen</td>
+				</tr>
+				<tr>
+			   		<td>Ctrl + U</td>
+			    	<td>Clears the line before the cursor position. If you are at the end of the line, clears the entire line.</td>
+				</tr>
+				<tr>
+			    	<td>Ctrl + H</td>
+			    	<td>Same as backspace</td>
+				</tr>
+				<tr>
+			    	<td>Ctrl + R</td>
+			    	<td>Lets you search through previously used commands</td>
+				</tr>
+				<tr>
+			    	<td>Ctrl + C</td>
+			    	<td>Kill whatever you are running</td>
+				</tr>
+				<tr>
+			    	<td>Ctrl + D</td>
+			    	<td>Exit the current shell</td>
+				</tr>
+				<tr>
+			    	<td>Ctrl + Z</td>
+			    	<td>Puts whatever you are running into a suspended background process. fg restores it.</td>
+				</tr>
+				<tr>
+			    	<td>Ctrl + W</td>
+			    	<td>Delete the word before the cursor</td>
+				</tr>
+				<tr>
+			    	<td>Ctrl + K</td>
+			    	<td>Clear the line after the cursor</td>
+				</tr>
+				<tr>
+			    	<td>Ctrl + T</td>
+			    	<td>Swap the last two characters before the cursor</td>
+				</tr>
+				<tr>
+			    	<td>Ctrl + F</td>
+			    	<td>Move cursor one character forward</td>
+				</tr>
+				<tr>
+			    	<td>Ctrl + B</td>
+			    	<td>Move cursor one character backward</td>
+				</tr>
+				<tr>
+			    	<td>Esc + F</td>
+			    	<td>Move cursor one word forward</td>
+				</tr>
+				<tr>
+			    	<td>Esc + B</td>
+			    	<td>Move cursor one word backward</td>
+				</tr>
+				<tr>
+					<td>Esc + T</td>
+					<td>Swap the last two words before the cursor</td>
+				</tr>
+				<tr>
+			    	<td>Tab</td>
+			    	<td>Auto-complete files and folder names</td>
+			 	</tr>
+			</table>
+			<h2>Basic Commands</h2>
+			<table>
+				<tr>
+			    	<th>Terminal Commands</th>
+			    	<th>Definitions and Use</th>
+				</tr>
+				<tr>
+					<td>cd</td>
+					<td>Home directory</td>
+				</tr>
+				<tr>
+			    	<td>cd [folder]</td>
+			    	<td>Change directory</td>
+				</tr>
+				<tr>
+			    	<td>cd ~</td>
+			    	<td>Home directory, e.g. ‘cd ~/folder/’</td>
+				</tr>
+				<tr>
+			    	<td>cd /</td>
+			    	<td>Root of drive</td>
+				</tr>
+				<tr>
+			    	<td>ls</td>
+			    	<td>Short listing</td>
+				</tr>
+				<tr>
+			    	<td>ls -l</td>
+			    	<td>Long listing</td>
+				</tr>
+				<tr>
+			    	<td>ls -a</td>
+			    	<td>Listing incl. hidden files</td>
+				</tr>
+				<tr>
+			    	<td>ls -lh</td>
+			    	<td>Long listing with Human readable file sizes</td>
+				</tr>
+				<tr>
+			    	<td>ls -R</td>
+			    	<td>Entire content of folder recursively</td>
+				</tr>
+				<tr>
+			    	<td>sudo [command]</td>
+			    	<td>Run command with the security privileges of the superuser (Super User DO)</td>
+				</tr>
+				<tr>
+			    	<td>open [file]</td>
+			    	<td>Opens a file ( as if you double clicked it )</td>
+				</tr>
+				<tr>
+			    	<td>top</td>
+			    	<td>Displays active processes. Press q to quit</td>
+				</tr>
+				<tr>
+			    	<td>nano [file]</td>
+			    	<td>Opens the Terminal its editor</td>
+				</tr>
+				<tr>
+			    	<td>pico [file]</td>
+			    	<td>Opens the Terminal its editor</td>
+				</tr>
+				<tr>
+			    	<td>q</td>
+			    	<td>Exit</td>
+				</tr>
+				<tr>
+			    	<td>clear</td>
+			    	<td>Clear screen</td>
+				</tr>
+			</table>
+			<h2>File/Directory Management</h2>
+			<table>
+				<tr>
+			    	<th>Terminal Commands</th>
+			    	<th>Definitions and Use</th>
+				</tr>
+				<tr>
+					<td>touch</td>
+					<td>Create new file</td>
+				</tr>
+				<tr>
+			    	<td>pwd</td>
+			    	<td>Full path to working directory</td>
+				</tr>
+				<tr>
+			    	<td>..</td>
+			    	<td>Parent/enclosing directory</td>
+				</tr>
+				<tr>
+			    	<td>rm</td>
+			    	<td>Remove a file</td>
+				</tr>
+				<tr>
+			    	<td>rm -r</td>
+			    	<td>Remove a directory and contents</td>
+				</tr>
+				<tr>
+			    	<td>rm -f</td>
+			    	<td>Force removal without confirmation</td>
+				</tr>
+				<tr>
+			    	<td>rm -i</td>
+			    	<td>Listing incl. hidden files</td>
+				</tr>
+				<tr>
+			    	<td>cp [file] [newfile]</td>
+			    	<td>Copy file to file</td>
+				</tr>
+				<tr>
+			    	<td>cp [file] [dir]</td>
+			    	<td>Copy file to directory</td>
+				</tr>
+				<tr>
+			    	<td>mv [file] [new filename]</td>
+			    	<td>Move/Rename, e.g. mv -v [file] [dir]rivileges of the superuser (Super User DO)</td>
+				</tr>
+				<tr>
+			    	<td>mkdir [dir]</td>
+			    	<td>Create new directory</td>
+				</tr>
+				<tr>
+			    	<td>mkdir -p [dir]/[dir]</td>
+			    	<td>Create nested directories</td>
+				</tr>
+				<tr>
+			    	<td>rmdir [dir]</td>
+			    	<td>Remove directory ( only operates on empty directories )</td>
+				</tr>
+				<tr>
+			    	<td>rm -R [dir]</td>
+			    	<td>Remove directory and contents</td>
+				</tr>
+			</table>
+    	</div>
+	<footer class="footer">
+		<a href="https://www.facebook.com/alan.alcesto"> <img src="../imgs/facebook.png"/></a> 
+		<a href="https://github.com/aalcesto23"> <img src="../imgs/github.png"/></a> 
+		<a href="https://www.linkedin.com/in/aalcesto"> <img src="../imgs/linkedin.png"/></a> 
+	</footer>
+	</body>
+</html>
