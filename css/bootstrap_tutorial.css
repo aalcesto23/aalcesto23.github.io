@@ -1,0 +1,106 @@
+.playfair-display-bold {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.row-container {
+  border-radius: 8px;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+p {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.col-purple {
+  background-color: purple;
+  color: white;
+}
+
+.col-red {
+  background-color: red;
+  color: white;
+}
+
+.col-green {
+  background-color: green;
+  color: white;
+}
+
+.col-color-1 {
+  background-color: #eae2d6;
+}
+
+.col-color-2 {
+  background-color: #ffcb56;
+}
+
+.col-color-3 {
+  background-color: #8b9a6e;
+}
+
+.bg-body-tertiary {
+  background-color: rgba(75, 75, 75, 1) !important;
+}
+
+.navbar-brand {
+  background-color: rgba(75, 75, 75, 1) !important;
+  color: #fff !important;
+}
+
+.nav-link {
+  color: rgba(200, 200, 200, 1) !important;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+}
+
+.navbar .active {
+  color: #fff !important;
+}
+
+.navbar-toggler {
+  filter: invert(100%);
+}
+
+.footer-cy {
+  .footer-text {
+    font-family: "Playfair Display", serif;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+
+.btn-primary {
+  background-color: #6f42c1;
+  border-color: #6f42c1;
+}
+.btn-primary:hover {
+  background-color: coral;
+  border-color: coral;
+}
+
+.btn-secondary {
+  background-color: #6f42c1;
+  border-color: #6f42c1;
+}
+.btn-secondary:hover {
+  background-color: coral;
+  border-color: coral;
+}
