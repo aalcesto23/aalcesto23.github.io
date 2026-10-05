@@ -5,53 +5,22 @@
   font-style: normal;
 }
 
+.geist-mono-specs {
+  font-family: "Geist Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kode-mono-font {
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .row-container {
   border-radius: 8px;
-}
-
-h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 2.2rem;
-  font-weight: 700;
-}
-
-h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-p {
-  font-family: "Playfair Display", serif;
-  font-size: 1.2rem;
-  font-weight: 400;
-}
-
-.col-purple {
-  background-color: purple;
-  color: white;
-}
-
-.col-red {
-  background-color: red;
-  color: white;
-}
-
-.col-green {
-  background-color: green;
-  color: white;
-}
-
-.col-color-1 {
-  background-color: #eae2d6;
-}
-
-.col-color-2 {
-  background-color: #ffcb56;
-}
-
-.col-color-3 {
-  background-color: #8b9a6e;
 }
 
 .bg-body-tertiary {
@@ -87,83 +56,65 @@ p {
   }
 }
 
-.playfair-display-text {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.roboto-condensed-specs {
-  font-family: "Roboto Condensed", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.geist-mono-specs {
-  font-family: "Geist Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.geist-mono-h1 {
+h1 {
   font-family: "Geist Mono", monospace;
   font-weight: 700;
   font-size: 47.78px;
 }
 
-.geist-mono-h2 {
+h2 {
   font-family: "Geist Mono", monospace;
   font-weight: 700;
   font-size: 39.81px;
 }
 
-.geist-mono-h3 {
+h3 {
   font-family: "Geist Mono", monospace;
   font-weight: 700;
   font-size: 33.18px;
 }
 
-.geist-mono-h4 {
+h4 {
   font-family: "Geist Mono", monospace;
   font-weight: 700;
   font-size: 27.65px;
 }
 
-.geist-mono-h5 {
+h5 {
   font-family: "Geist Mono", monospace;
   font-weight: 700;
   font-size: 23.04px;
 }
 
-.geist-mono-h6 {
+h6 {
   font-family: "Geist Mono", monospace;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 19.2px;
 }
 
-.geist-mono-p {
+p {
   font-family: "Geist Mono", monospace;
   font-weight: 400;
   font-size: 16px;
 }
 
-.geist-mono-small {
+small {
   font-family: "Geist Mono", monospace;
   font-weight: 400;
   font-size: 13.33px;
 }
 
-.card {
-  cursor: pointer;
+.specs {
+  background-color: lightblue;
 }
 
-.card:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+.col-lg-7 {
+  background-color: darkblue;
+  color: white;
+}
+
+.parent-container {
+  background-color: lightgray;
 }
 
 body {
