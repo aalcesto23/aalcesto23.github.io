@@ -55,11 +55,11 @@ p {
 }
 
 .bg-body-tertiary {
-  background-color: rgba(75, 75, 75, 1) !important;
+  background-color: #a4301e !important;
 }
 
 .navbar-brand {
-  background-color: rgba(75, 75, 75, 1) !important;
+  background-color: #a4301e !important;
   color: #fff !important;
 }
 
@@ -167,5 +167,51 @@ p {
 }
 
 body {
-  background-color: #f2f0ef;
+  background-color: #fda921;
+}
+
+.logo-size {
+  background-color: darkolivegreen;
+  border-radius: 8px;
+}
+
+.logo-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.logo-img {
+  display: block;
+  object-fit: contain;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+}
+
+.logo-table {
+  background-color: lightyellow;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+}
+
+.logo-table th,
+.logo-table td {
+  background-color: transparent;
+}
+
+.logo-thumb {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-right: 0.75rem;
+}
+
+.usage-card {
+  background-color: lightyellow;
+  border-radius: 8px;
+  padding: 1.5rem;
 }

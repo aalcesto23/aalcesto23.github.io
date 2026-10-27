@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HCI 472: Type Hierarchies</title>
+    <link rel="icon" type="image/x-icon" href="./imgs/6.svg" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -46,28 +47,27 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Type Hierarchies
+                Logo Collection
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a
-                    class="dropdown-item"
-                    href="typeHierarchies/hierarchy_1.html"
-                    >Hierarchy 1</a
-                  >
+                  <a class="dropdown-item" href="logos/logo_1.html">Logo 1</a>
                 </li>
                 <li>
-                  <a
-                    class="dropdown-item"
-                    href="typeHierarchies/hierarchy_2.html"
-                    >Hierarchy 2</a
-                  >
+                  <a class="dropdown-item" href="logos/logo_2.html">Logo 2</a>
                 </li>
                 <li>
-                  <a
-                    class="dropdown-item"
-                    href="typeHierarchies/hierarchy_3.html"
-                    >Hierarchy 3</a
+                  <a class="dropdown-item" href="logos/logo_3.html">Logo 3</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="logos/logo_4.html">Logo 4</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="logos/logo_5.html">Logo 5</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="logos/logo_6.html"
+                    >Logo 6: favicon</a
                   >
                 </li>
               </ul>
@@ -79,7 +79,7 @@
 
     <div class="container-lg p-5">
       <div class="row">
-        <div class="col-lg-4 pb-2">
+        <!-- <div class="col-lg-4 pb-2">
           <div
             class="card h-100"
             onclick="
@@ -122,9 +122,9 @@
               </p>
             </div>
           </div>
-        </div>
+        </div> -->
 
-        <div class="col-lg-4 pb-2">
+        <!-- <div class="col-lg-4 pb-2">
           <div
             class="card h-100"
             onclick="
@@ -145,14 +145,283 @@
               </p>
             </div>
           </div>
+        </div> -->
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="4"
+              aria-label="Slide 5"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="5"
+              aria-label="Slide 6"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                class="d-block w-100"
+                src="./imgs/1.svg"
+                alt="First slide"
+                height="700"
+                width="100%"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="./imgs/2.svg"
+                alt="Second slide"
+                height="700"
+                width="100%"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="./imgs/3.svg"
+                alt="Third slide"
+                height="700"
+                width="100%"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="./imgs/4.svg"
+                alt="Fourth slide"
+                height="700"
+                width="100%"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="./imgs/5.svg"
+                alt="Fifth slide"
+                height="700"
+                width="100%"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="./imgs/6.svg"
+                alt="Sixth slide"
+                height="700"
+                width="100%"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
-    </div>
 
-    <div class="footer footer-cy border-top py-3 mx-5">
-      <div class="container">
-        <p class="text-center footer-text">&copy; 2023 Alan Alcesto</p>
-      </div>
+      <section id="assets" class="py-5">
+        <p class="eyebrow mb-2">Technical specifications</p>
+        <h2 class="mb-3">File formats &amp; assets</h2>
+        <p class="mb-4" style="max-width: 650px">
+          Each logo variation is made for a different context. All of them are
+          SVG files, so they stay sharp at any size.
+        </p>
+
+        <div class="table-responsive logo-table">
+          <table class="table align-middle mb-0">
+            <thead>
+              <tr>
+                <th>Asset</th>
+                <th>Format</th>
+                <th>Recommended use</th>
+                <th>Recommended sizes</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="logos/logo_1.html">
+                    <img src="./imgs/1.svg" alt="Logo 1" class="logo-thumb" />
+                  </a>
+                </td>
+                <td>SVG</td>
+                <td>Portfolio, website and digital materials</td>
+                <td>Website header: 200&ndash;400&nbsp;px wide<br />Minimum: 120&nbsp;px wide</td>
+                <td>
+                  Two stacked triangles in gold and dark green, with a soft
+                  yellow sun behind them and my signature in the corner.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="logos/logo_2.html">
+                    <img src="./imgs/2.svg" alt="Logo 2" class="logo-thumb" />
+                  </a>
+                </td>
+                <td>SVG</td>
+                <td>Monochrome layouts, print and documents</td>
+                <td>Print: 1&ndash;3&nbsp;in (25&ndash;75&nbsp;mm) wide<br />Minimum: 0.75&nbsp;in (20&nbsp;mm)</td>
+                <td>
+                  The full logo in black and white: a white top triangle, a
+                  black bottom triangle and a solid black sun.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="logos/logo_3.html">
+                    <img src="./imgs/3.svg" alt="Logo 3" class="logo-thumb" />
+                  </a>
+                </td>
+                <td>SVG</td>
+                <td>Stamps, engraving and single-color merchandise</td>
+                <td>Stamps: 1&ndash;2&nbsp;in (25&ndash;50&nbsp;mm)<br />Minimum: 0.5&nbsp;in (12&nbsp;mm)</td>
+                <td>
+                  The sun is removed and the colors are flipped, with a black
+                  top triangle and a white bottom triangle.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="logos/logo_4.html">
+                    <img src="./imgs/4.svg" alt="Logo 4" class="logo-thumb" />
+                  </a>
+                </td>
+                <td>SVG</td>
+                <td>Light backgrounds, letterheads and email signatures</td>
+                <td>Letterhead: 1.5&ndash;2&nbsp;in wide<br />Email signature: 150&ndash;200&nbsp;px wide</td>
+                <td>
+                  White triangles outlined in dark green, with a dark green sun
+                  and inner triangles. A lighter take on the primary logo.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="logos/logo_5.html">
+                    <img src="./imgs/5.svg" alt="Logo 5" class="logo-thumb" />
+                  </a>
+                </td>
+                <td>SVG</td>
+                <td>App icons, social media avatars and profile images</td>
+                <td>App icon: 1024&times;1024&nbsp;px<br />Social avatar: 400&times;400&nbsp;px</td>
+                <td>
+                  The green outline logo set on a rounded gold square, so it
+                  stands out on any background.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="logos/logo_6.html">
+                    <img src="./imgs/6.svg" alt="Logo 6" class="logo-thumb" />
+                  </a>
+                </td>
+                <td>SVG</td>
+                <td>Browser tabs and small digital interfaces</td>
+                <td>Favicon: 16&times;16, 32&times;32, 48&times;48&nbsp;px<br />Apple touch icon: 180&times;180&nbsp;px</td>
+                <td>
+                  A single large triangle and the sun on a rounded gold square.
+                  The simplified shape stays readable at very small sizes.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="usage" class="pb-5">
+        <p class="eyebrow mb-2">Brand guidelines</p>
+        <h2 class="mb-3">How to use the logo</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="usage-card h-100">
+              <h3 class="h5">Clear space</h3>
+              <p class="mb-2">
+                Leave space around the logo equal to the height of the sun on
+                every side. Keep text, images and edges outside that zone.
+              </p>
+              <h3 class="h5 mt-4">Minimum size</h3>
+              <ul class="mb-0">
+                <li>Screen: 120 px wide minimum for the full logo.</li>
+                <li>Print: 0.75 inch (20 mm) wide minimum.</li>
+                <li>Below those sizes, use the simplified favicon mark.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="usage-card h-100">
+              <h3 class="h5">Do and don&rsquo;t</h3>
+              <ul class="mb-0">
+                <li>Do use the SVG files so edges stay sharp at any size.</li>
+                <li>
+                  Do choose the variation that matches the background contrast.
+                </li>
+                <li>
+                  Do use the black and white versions when only one color is
+                  available.
+                </li>
+                <li>Don&rsquo;t stretch, rotate or recolor the triangles.</li>
+                <li>
+                  Don&rsquo;t place the outline version on dark or busy
+                  backgrounds.
+                </li>
+                <li>
+                  Don&rsquo;t remove the sun from the primary logo or add
+                  effects like shadows.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
