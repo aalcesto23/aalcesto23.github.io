@@ -1,0 +1,526 @@
+/* ==========================================================================
+   HCI 472: Simple Design System – Alan Alcesto
+   Layer 1: primitives  →  Layer 2: semantic tokens  →  Layer 3: Bootstrap
+   Values mirror the Figma file "HCI 472: Simple Design System – Alan Alcesto"
+   (pages: Foundation & Components · Designs · Designs Specs & Grids).
+   ========================================================================== */
+
+:root {
+  /* 1 · Primitives (Color · Primitives collection) */
+  --aa-forest-green: #003d20;
+  --aa-emerald-green: #0a714e;
+  --aa-sunflower-yellow: #ffce1b;
+  --aa-black: #000000;
+  --aa-charcoal: #1e1e1e;
+  --aa-light-gray: #d9d9d9;
+  --aa-white: #ffffff;
+  --aa-sand: #ddcbb6;
+  --aa-cream: #ede4d9;
+  --aa-tan: #bc9a71;
+
+  /* 2 · Semantic tokens (Color · Semantic collection) */
+  --sds-action-primary: var(--aa-forest-green);
+  --sds-action-primary-hover: var(--aa-emerald-green);
+  --sds-text-primary: var(--aa-black);
+  --sds-text-body: var(--aa-charcoal);
+  --sds-text-link: var(--aa-forest-green);
+  --sds-text-link-hover: var(--aa-emerald-green);
+  --sds-text-brand: var(--aa-emerald-green);
+  --sds-text-inverse: var(--aa-white);
+  --sds-text-on-brand-muted: var(--aa-light-gray);
+  --sds-graphic-brand: var(--aa-forest-green);
+  --sds-graphic-primary: var(--aa-black);
+  --sds-icon-default: var(--aa-charcoal);
+  --sds-icon-inverse: var(--aa-white);
+  --sds-surface-page: var(--aa-sand);
+  --sds-surface-card: var(--aa-cream);
+  --sds-surface-canvas: var(--aa-white);
+  --sds-surface-brand: var(--aa-emerald-green);
+  --sds-surface-accent: var(--aa-sunflower-yellow);
+  --sds-surface-testimonial: var(--aa-tan);
+  --sds-surface-placeholder: var(--aa-light-gray);
+
+  /* Type (Headers / Labels / Paragraph text styles) */
+  --sds-font-heading: "Geist", system-ui, sans-serif;
+  --sds-font-body: "Inter", system-ui, sans-serif;
+  --sds-font-nav: "Instrument Sans", "Inter", system-ui, sans-serif; /* nav-bar link labels */
+  --sds-tracking-heading: -0.06em;
+
+  /* Radii used by the Figma components (not variables in Figma) */
+  --sds-radius-sm: 8px;   /* intro panel, swatches */
+  --sds-radius: 16px;     /* testimonial, results-stats, image-placeholder */
+  --sds-radius-lg: 24px;  /* status-card */
+  --sds-radius-pill: 99px;/* button, chit, nav pill */
+
+  /* Implementation values (code only) */
+  --sds-focus-ring: 3px solid var(--aa-forest-green);
+  --sds-focus-ring-inverse: 3px solid var(--aa-sunflower-yellow);
+  --sds-transition: 150ms ease;
+
+  /* 3 · Bootstrap mapping */
+  --bs-primary: #003d20;
+  --bs-primary-rgb: 0, 61, 32;
+  --bs-body-font-family: var(--sds-font-body);
+  --bs-body-color: var(--sds-text-body);
+  --bs-body-bg: var(--sds-surface-page);
+  --bs-emphasis-color: var(--sds-text-primary);
+  --bs-link-color: var(--sds-text-link);
+  --bs-link-color-rgb: 0, 61, 32;
+  --bs-link-hover-color: var(--sds-text-link-hover);
+  --bs-link-hover-color-rgb: 10, 113, 78;
+  --bs-code-color: var(--aa-emerald-green);
+  --bs-border-radius: var(--sds-radius);
+  --bs-border-radius-lg: var(--sds-radius-lg);
+  --bs-border-radius-pill: var(--sds-radius-pill);
+}
+
+body {
+  background-color: var(--sds-surface-page);
+  color: var(--sds-text-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--aa-sunflower-yellow);
+  color: var(--aa-forest-green);
+}
+
+:focus-visible {
+  outline: var(--sds-focus-ring);
+  outline-offset: 3px;
+}
+
+/* Headers ---------------------------------------------------------------- */
+h1, h2, h3, h4, h5,
+.sds-h1, .sds-h2, .sds-h3, .sds-h4, .sds-h5 {
+  font-family: var(--sds-font-heading);
+  letter-spacing: var(--sds-tracking-heading);
+  color: var(--sds-text-primary);
+}
+.sds-h1 { font-size: clamp(3rem, 7vw, 4.5rem); font-weight: 700; line-height: 1; }   /* 72 / 72 */
+.sds-h2 { font-size: 3rem; font-weight: 700; line-height: 1; }                       /* 48 / 48 */
+.sds-h3 { font-size: 2.25rem; font-weight: 700; line-height: normal; }               /* 36 / auto */
+.sds-h4 { font-size: 2rem; font-weight: 600; line-height: normal; }                  /* 32 / auto */
+.sds-h5 { font-size: 1.5rem; font-weight: 600; line-height: normal; }                /* 24 / auto */
+
+/* Labels & paragraph ----------------------------------------------------- */
+.sds-paragraph { font-size: 0.75rem; line-height: normal; }
+.sds-paragraph-italic { font-size: 0.75rem; line-height: normal; font-style: italic; }
+.sds-quotation { font-family: var(--sds-font-body); font-weight: 700; font-size: 4rem; line-height: normal; }
+.sds-chit-text { font-size: 0.625rem; font-weight: 300; line-height: normal; }
+.sds-stats-text { font-size: 1rem; font-weight: 600; line-height: normal; }
+
+/* ==========================================================================
+   Components (Figma: Foundation & Components → Components)
+   ========================================================================== */
+
+/* button ------------------------------------------------------------------
+   Property 1=Default · button-over · button-link · button-link-hover
+   Inter Regular 12 · padding 10px 26px · radius 99px                        */
+.btn {
+  --bs-btn-font-family: var(--sds-font-body);
+  --bs-btn-font-size: 0.75rem;
+  --bs-btn-font-weight: 400;
+  --bs-btn-line-height: normal;
+  --bs-btn-padding-y: 10px;
+  --bs-btn-padding-x: 26px;
+  --bs-btn-border-width: 0;
+  --bs-btn-border-radius: var(--sds-radius-pill);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--sds-transition), color var(--sds-transition);
+}
+.btn:focus-visible {
+  outline: var(--sds-focus-ring);
+  outline-offset: 3px;
+  box-shadow: none;
+}
+.btn-primary,
+.btn-primary.is-default {
+  --bs-btn-color: var(--sds-text-on-brand-muted);
+  --bs-btn-bg: var(--sds-action-primary);
+  --bs-btn-hover-color: var(--sds-text-on-brand-muted);
+  --bs-btn-hover-bg: var(--sds-action-primary-hover);
+  --bs-btn-active-color: var(--sds-text-on-brand-muted);
+  --bs-btn-active-bg: var(--sds-action-primary-hover);
+  --bs-btn-focus-shadow-rgb: 0, 61, 32;
+}
+.btn-primary.is-hover { --bs-btn-bg: var(--sds-action-primary-hover); }
+.btn-link {
+  --bs-btn-color: var(--sds-text-link);
+  --bs-btn-hover-color: var(--sds-text-link-hover);
+  --bs-btn-active-color: var(--sds-text-link-hover);
+  text-decoration: none;
+}
+.btn-link:hover,
+.btn-link.is-hover {
+  color: var(--sds-text-link-hover);
+  text-decoration: underline;
+  text-underline-position: from-font;
+}
+.sds-on-dark .btn:focus-visible,
+.sds-on-dark :focus-visible { outline: var(--sds-focus-ring-inverse); }
+
+/* chit ---------------------------------------------------------------------
+   Property 1=Default · chit-hover
+   Sunflower fill · Inter Light 10 charcoal · padding 2px 10px · radius 99px
+   Hover adds a 1px black border (drawn as a ring so the chit doesn't shift) */
+.sds-chit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 10px;
+  border-radius: var(--sds-radius-pill);
+  background: var(--sds-surface-accent);
+  color: var(--sds-text-body);
+  font-family: var(--sds-font-body);
+  font-size: 0.625rem;
+  font-weight: 300;
+  line-height: normal;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: box-shadow var(--sds-transition);
+}
+a.sds-chit:hover,
+.sds-chit.is-hover {
+  color: var(--sds-text-body);
+  box-shadow: 0 0 0 1px var(--aa-black);
+}
+.sds-chit-row { display: flex; flex-wrap: wrap; gap: 2px; }
+
+/* nav-bar ------------------------------------------------------------------
+   Property 1=Default: 56px emerald logo tile · forest pill of icon links ·
+   56px forest email tile, 12px apart.
+   Property 1=Mobile: 36px logo tile and 36px forest menu tile, spaced apart. */
+.sds-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.sds-nav-logo,
+.sds-nav-email,
+.sds-nav-menu {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  border: 0;
+  padding: 0;
+}
+.sds-nav-logo { background: var(--sds-surface-brand); }
+.sds-nav-logo img { display: block; width: 56px; height: 56px; }
+.sds-nav-email { background: var(--sds-graphic-brand); }
+.sds-nav-email img { display: block; }
+.sds-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 56px;
+  margin: 0;
+  padding: 0 20px;
+  list-style: none;
+  background: var(--sds-graphic-brand);
+  border-radius: var(--sds-radius-pill);
+}
+.sds-nav-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-family: var(--sds-font-nav);
+  font-size: 1rem;
+  line-height: 22px;
+  color: var(--sds-text-on-brand-muted);
+  text-decoration: none;
+}
+.sds-nav-links a:hover,
+.sds-nav-links a[aria-current="page"] { color: var(--sds-text-inverse); }
+.sds-nav-icon { flex: none; display: grid; place-items: center; width: 16px; height: 16px; }
+.sds-nav :focus-visible { outline: var(--sds-focus-ring-inverse); outline-offset: 2px; }
+.sds-nav-menu { display: none; background: var(--sds-graphic-brand); cursor: pointer; }
+.sds-nav-menu img { display: block; }
+
+/* Mobile variant */
+.sds-nav.is-mobile,
+.sds-nav-mobile-only { justify-content: space-between; }
+.sds-nav.is-mobile .sds-nav-logo,
+.sds-nav.is-mobile .sds-nav-menu { width: 36px; height: 36px; border-radius: 18px; }
+.sds-nav.is-mobile .sds-nav-logo img { width: 36px; height: 36px; }
+.sds-nav.is-mobile .sds-nav-menu { display: inline-grid; }
+.sds-nav.is-mobile .sds-nav-email { display: none; }
+.sds-nav.is-mobile { flex-wrap: wrap; gap: 8px; }
+/* Code-only: the links the mobile menu tile reveals */
+.sds-nav-drawer { flex-basis: 100%; }
+.sds-nav-drawer .sds-nav-links {
+  flex-wrap: wrap;
+  height: auto;
+  padding: 12px 20px;
+  border-radius: 18px;
+}
+
+/* Site chrome: Bootstrap navbar that carries the Figma logo */
+.sds-navbar {
+  --bs-navbar-padding-y: 0.75rem;
+  --bs-navbar-color: var(--sds-text-on-brand-muted);
+  --bs-navbar-hover-color: var(--sds-text-inverse);
+  --bs-navbar-active-color: var(--sds-text-inverse);
+  --bs-navbar-brand-color: var(--sds-text-inverse);
+  --bs-navbar-brand-hover-color: var(--sds-text-inverse);
+  --bs-navbar-toggler-border-color: transparent;
+  --bs-navbar-toggler-focus-width: 0;
+  background-color: var(--sds-graphic-brand);
+}
+.sds-navbar .navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--sds-font-heading);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  font-size: 1.125rem;
+}
+.sds-navbar .nav-link {
+  font-family: var(--sds-font-nav);
+  font-size: 1rem;
+  position: relative;
+  padding-block: 0.75rem;
+}
+.sds-navbar .nav-link.active::after,
+.sds-navbar .nav-link[aria-current]::after {
+  content: "";
+  position: absolute;
+  left: var(--bs-navbar-nav-link-padding-x, 0.5rem);
+  right: var(--bs-navbar-nav-link-padding-x, 0.5rem);
+  bottom: 0.35rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--sds-surface-accent);
+}
+.sds-navbar .navbar-toggler { padding: 0; }
+.sds-navbar :focus-visible { outline: var(--sds-focus-ring-inverse); outline-offset: 2px; }
+.sds-logo { display: block; width: 36px; height: 36px; flex: none; }
+
+/* intro --------------------------------------------------------------------
+   Property 1=Default (desktop): cream panel, intro text left (431px) and
+   project overview right (194px). Property 1=intro-mobile: stacked.        */
+.sds-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 24px;
+  border-radius: var(--sds-radius-sm);
+  background: var(--sds-surface-card);
+}
+.sds-intro-text { flex: 0 1 431px; padding-right: 24px; }
+.sds-intro-text .sds-h3 { color: var(--aa-forest-green); margin: 0 0 1px; }
+.sds-intro-text p { font-size: 0.75rem; line-height: normal; color: var(--sds-text-primary); margin: 0; }
+.sds-intro-text p + p { margin-top: 1em; }
+.sds-overview { flex: 0 0 194px; display: flex; flex-direction: column; gap: 16px; margin: 0; }
+.sds-overview dt { margin: 0 0 2px; font-weight: 600; }
+.sds-overview dd { margin: 0; }
+.sds-overview .is-brand { color: var(--aa-forest-green); }
+.sds-intro.is-mobile { flex-direction: column; align-items: stretch; padding: 0; gap: 24px; }
+.sds-intro.is-mobile .sds-intro-text,
+.sds-intro.is-mobile .sds-overview { flex: none; width: 100%; padding: 8px; }
+
+/* status-card --------------------------------------------------------------
+   Property 1=Default (Problem · Frown) · status-card-solution (Smile) ·
+   status-card-results (Check circle)                                        */
+.sds-status-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 205px;
+  min-width: 205px;
+  max-height: 245px;
+  padding: 24px;
+  border-radius: var(--sds-radius-lg);
+  background: var(--sds-surface-card);
+  margin: 0;
+}
+.sds-status-icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background: var(--sds-surface-accent);
+}
+.sds-status-icon img { display: block; }
+.sds-status-card .sds-h3 { color: var(--aa-forest-green); margin: 0; }
+.sds-status-card p { font-size: 0.75rem; line-height: normal; color: var(--sds-text-body); margin: 0; }
+.sds-status-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.sds-status-cards .sds-status-card { width: 205px; }
+
+/* results-stats ----------------------------------------------------------- */
+.sds-results-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 24px;
+  column-gap: 16px;
+  margin: 0;
+  padding: 8px 16px;
+  border-radius: var(--sds-radius);
+  background: var(--sds-surface-card);
+  color: var(--aa-forest-green);
+}
+.sds-stat { display: flex; flex-direction: column-reverse; }
+.sds-stat-value {
+  font-family: var(--sds-font-heading);
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 48px;
+  letter-spacing: var(--sds-tracking-heading);
+  margin: 0;
+}
+.sds-stat-label {
+  font-family: var(--sds-font-heading);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: normal;
+  letter-spacing: var(--sds-tracking-heading);
+  margin: 0;
+}
+/* Mobile: 2 × 2 grid, labels switch to Labels/Stats Text Moble (Inter SemiBold 16) */
+.sds-results-stats.is-mobile { display: grid; grid-template-columns: 1fr 1fr; row-gap: 72px; padding: 16px 8px; }
+.sds-results-stats.is-mobile .sds-stat-label { font-family: var(--sds-font-body); font-size: 1rem; letter-spacing: 0; }
+
+/* testemonial-card -------------------------------------------------------- */
+.sds-testimonial-card {
+  display: flex;
+  align-items: stretch;
+  min-height: 96px;
+  padding: 8px 16px;
+  border-radius: var(--sds-radius);
+  background: var(--sds-surface-testimonial);
+  margin: 0;
+}
+.sds-testimonial-card .sds-quotation {
+  flex: none;
+  width: 27px;
+  padding: 0 10px;
+  box-sizing: content-box;
+  color: var(--aa-forest-green);
+  align-self: center;
+}
+.sds-testimonial-card blockquote {
+  flex: 1 1 0;
+  margin: 0;
+  padding: 10px;
+  font-family: var(--sds-font-heading);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: normal;
+  letter-spacing: var(--sds-tracking-heading);
+  color: var(--sds-text-inverse);
+}
+
+/* image-placeholder ------------------------------------------------------- */
+.sds-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 320px;
+  padding: 0 24px;
+  border-radius: var(--sds-radius);
+  background: var(--sds-surface-placeholder);
+  color: var(--sds-text-body);
+  font-size: 0.625rem;
+  font-weight: 300;
+}
+
+/* footer ------------------------------------------------------------------
+   Emerald bar, 84px tall: footer logo (112 × 93) + name and email in
+   Labels/Chit Text, white, centred.                                         */
+.sds-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 84px;
+  padding: 0 20px;
+  background: var(--sds-surface-brand);
+  color: var(--sds-text-inverse);
+  font-size: 0.625rem;
+  font-weight: 300;
+  line-height: normal;
+  text-align: center;
+}
+.sds-footer img { display: block; flex: none; }
+.sds-footer p { margin: 0; }
+.sds-footer a { color: var(--sds-text-inverse); }
+.sds-footer a:hover { color: var(--sds-surface-accent); }
+.sds-footer :focus-visible { outline: var(--sds-focus-ring-inverse); outline-offset: 2px; }
+
+/* Case-study section (section-name · section-title) ----------------------- */
+.sds-section { display: flex; flex-direction: column; gap: 16px; }
+.sds-section-name { color: var(--sds-text-brand); margin: 0; }
+.sds-section-title { color: var(--aa-forest-green); margin: 0; }
+.sds-section-paragraph p { font-size: 0.75rem; line-height: normal; color: var(--sds-text-primary); margin: 0; }
+.sds-section-paragraph p + p { margin-top: 1em; }
+
+/* ==========================================================================
+   Case-study page layout (Figma: Designs Specs & Grids)
+   Desktop 1440 → 960px column, 936px content (12px side padding), 28px rhythm
+   Tablet  834  → 810px content, 24px rhythm
+   Mobile  402  → 378px content (12px gutters), 31px rhythm
+   ========================================================================== */
+.sds-case-study { max-width: 960px; margin-inline: auto; padding-inline: 12px; }
+.sds-case-study-header { padding-top: 19px; }
+.sds-case-study-body { display: flex; flex-direction: column; gap: 28px; padding-block: 4px 79px; }
+.sds-case-study-title { color: var(--aa-forest-green); margin: 0; }
+.sds-align-end { display: flex; justify-content: flex-end; }
+.sds-gallery { display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px; row-gap: 12px; }
+.sds-gallery > :first-child,
+.sds-gallery > :last-child { grid-column: 1 / -1; }
+.sds-section .sds-image-placeholder { min-height: 394px; }
+
+@media (max-width: 991.98px) {
+  .sds-case-study-body { gap: 24px; }
+}
+
+@media (max-width: 767.98px) {
+  .sds-case-study { padding-inline: 12px; }
+  .sds-case-study-header { padding-top: 13px; }
+  .sds-case-study-body { gap: 31px; padding-top: 45px; }
+  .sds-case-study-title { font-size: 3rem; line-height: 1; }     /* H2 on mobile */
+  .sds-section-title { font-size: 2.25rem; line-height: normal; } /* H3 on mobile */
+  .sds-align-end > .btn { flex: 0 0 50%; }
+  .sds-align-end.is-full > .btn { flex-basis: 100%; }
+
+  /* intro-mobile */
+  .sds-intro { flex-direction: column; align-items: stretch; padding: 0; gap: 24px; }
+  .sds-intro-text, .sds-overview { flex: none; width: 100%; padding: 8px; }
+
+  /* status cards stack full width */
+  .sds-status-cards { flex-direction: column; align-items: stretch; gap: 16px; }
+  .sds-status-cards .sds-status-card { width: 100%; }
+
+  /* gallery */
+  .sds-gallery { column-gap: 8px; }
+  .sds-gallery .sds-image-placeholder { min-height: 299px; }
+  .sds-section .sds-image-placeholder { min-height: 207px; }
+
+  /* results-stats 2 × 2 */
+  .sds-results-stats { display: grid; grid-template-columns: 1fr 1fr; row-gap: 72px; padding: 16px 8px; }
+  .sds-results-stats .sds-stat-label { font-family: var(--sds-font-body); font-size: 1rem; letter-spacing: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
+}

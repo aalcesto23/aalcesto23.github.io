@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Components · Simple Design System</title>
+    <link rel="icon" href="./imgs/favicon.svg" type="image/svg+xml" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Instrument+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/design_system.css" />
+    <link rel="stylesheet" href="./css/docs.css" />
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#docsToc" data-bs-root-margin="0px 0px -60%">
+    <a class="docs-skip" href="#main">Skip to content</a>
+
+    <nav class="navbar navbar-expand-md sds-navbar sticky-top" aria-label="Main">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html"><img class="sds-logo" src="./imgs/logo-nav.svg" width="56" height="56" alt="" /> Simple Design System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sds-nav-menu d-inline-grid" style="width: 36px; height: 36px"><img src="./imgs/icons/menu.svg" width="24" height="10" alt="" /></span>
+        </button>
+        <div class="collapse navbar-collapse" id="siteNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="./foundations.html">01 Foundations</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="./components.html">02 Components</a></li>
+            <li class="nav-item"><a class="nav-link" href="./patterns.html">03 Page Patterns</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="docs-page-header">
+      <div class="container">
+        <p class="docs-label mb-2" style="color: var(--sds-surface-accent)">02 &middot; Components</p>
+        <h1 class="sds-h2 mb-3">Components</h1>
+        <p class="lead mb-0">
+          The nine components on the Figma <em>Foundation &amp; Components</em> page, rebuilt as HTML and CSS on Bootstrap 5.
+          Each variant is labelled with its Figma property name. Content and sizes come straight from the Figma file.
+        </p>
+        <nav class="docs-subnav" aria-label="Components">
+          <a href="#nav-bar">Navigation</a>
+          <a href="#button">Buttons</a>
+          <a href="#chit">Chit</a>
+          <a href="#image-placeholder">Image placeholder</a>
+          <a href="#status-card">Status cards</a>
+          <a href="#intro">Intro cards</a>
+          <a href="#results-stats">Stats</a>
+          <a href="#footer">Footer</a>
+          <a href="#testimonial-card">Testimonial</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container docs-layout">
+      <div class="row g-5">
+        <aside class="col-lg-3 d-none d-lg-block">
+          <nav id="docsToc" class="docs-sidebar nav flex-column" aria-label="Components on this page">
+            <p class="docs-label mb-2 ps-2">Components</p>
+            <a class="nav-link" href="#nav-bar">Nav bar <code>2</code></a>
+            <a class="nav-link" href="#button">Button <code>4</code></a>
+            <a class="nav-link" href="#chit">Chit <code>2</code></a>
+            <a class="nav-link" href="#image-placeholder">Image placeholder</a>
+            <a class="nav-link" href="#status-card">Status card <code>3</code></a>
+            <a class="nav-link" href="#intro">Intro <code>2</code></a>
+            <a class="nav-link" href="#results-stats">Results stats</a>
+            <a class="nav-link" href="#footer">Footer</a>
+            <a class="nav-link" href="#testimonial-card">Testimonial card</a>
+          </nav>
+        </aside>
+
+        <main id="main" class="col-lg-9">
+          <!-- =================================================== nav-bar -->
+          <section id="nav-bar" class="docs-block" aria-labelledby="nav-title">
+            <p class="docs-eyebrow mb-1">Components &middot; 01 &middot; <code>nav-bar</code></p>
+            <h2 id="nav-title" class="sds-h3">Nav bar</h2>
+            <p class="docs-muted">Three separate shapes: an emerald logo tile that links home, a forest-green pill of icon links (work, playground, about, cv), and a forest-green email tile. On mobile it shrinks to the logo tile and a menu tile.</p>
+
+            <h3>Variants</h3>
+            <div class="d-grid gap-3">
+              <div class="docs-variant">
+                <div class="docs-variant-stage is-page">
+                  <nav class="sds-nav" aria-label="Desktop example">
+                    <a class="sds-nav-logo" href="#nav-bar"><img src="./imgs/logo-nav.svg" width="56" height="56" alt="Home" /></a>
+                    <ul class="sds-nav-links">
+                      <li><a href="#nav-bar" aria-current="page"><span class="sds-nav-icon"><img src="./imgs/icons/briefcase.svg" width="14.9333" height="13.6" alt="" /></span>work</a></li>
+                      <li><a href="#nav-bar"><span class="sds-nav-icon"><img src="./imgs/icons/image.svg" width="14" height="14" alt="" /></span>playground</a></li>
+                      <li><a href="#nav-bar"><span class="sds-nav-icon"><img src="./imgs/icons/person.svg" width="10.6667" height="10.6667" alt="" /></span>about</a></li>
+                      <li><a href="#nav-bar"><span class="sds-nav-icon"><img src="./imgs/icons/folder.svg" width="14.9333" height="13.6" alt="" /></span>cv</a></li>
+                    </ul>
+                    <a class="sds-nav-email" href="#nav-bar"><img src="./imgs/icons/mail.svg" width="21.6" height="17.6" alt="Email" /></a>
+                  </nav>
+                </div>
+                <div class="docs-variant-caption"><code>Property 1=Default</code><span>500 &times; 56 &middot; desktop and tablet</span></div>
+              </div>
+              <div class="docs-variant" style="max-width: 24rem">
+                <div class="docs-variant-stage is-page">
+                  <nav class="sds-nav is-mobile w-100" aria-label="Mobile example">
+                    <a class="sds-nav-logo" href="#nav-bar"><img src="./imgs/logo-nav.svg" width="56" height="56" alt="Home" /></a>
+                    <button class="sds-nav-menu" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavDemo" aria-controls="mobileNavDemo" aria-expanded="false" aria-label="Menu"><img src="./imgs/icons/menu.svg" width="24" height="10" alt="" /></button>
+                    <div class="collapse sds-nav-drawer" id="mobileNavDemo">
+                      <ul class="sds-nav-links">
+                        <li><a href="#nav-bar" aria-current="page"><span class="sds-nav-icon"><img src="./imgs/icons/briefcase.svg" width="14.9333" height="13.6" alt="" /></span>work</a></li>
+                        <li><a href="#nav-bar"><span class="sds-nav-icon"><img src="./imgs/icons/image.svg" width="14" height="14" alt="" /></span>playground</a></li>
+                        <li><a href="#nav-bar"><span class="sds-nav-icon"><img src="./imgs/icons/person.svg" width="10.6667" height="10.6667" alt="" /></span>about</a></li>
+                        <li><a href="#nav-bar"><span class="sds-nav-icon"><img src="./imgs/icons/folder.svg" width="14.9333" height="13.6" alt="" /></span>cv</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+                </div>
+                <div class="docs-variant-caption"><code>Property 1=Mobile</code><span>251 &times; 36 &middot; tap the menu</span></div>
+              </div>
+            </div>
+
+            <h3>Specs</h3>
+            <div class="table-responsive">
+              <table class="table docs-table">
+                <thead><tr><th scope="col">Part</th><th scope="col">Value</th><th scope="col">Token</th></tr></thead>
+                <tbody>
+                  <tr><td>Logo tile</td><td>56 &times; 56 circle, #0A714E (36 &times; 36 on mobile)</td><td><code>surface/brand</code></td></tr>
+                  <tr><td>Link pill</td><td>56px tall, #003D20, radius 99px, 20px side padding, 12px between links</td><td><code>graphic/brand</code></td></tr>
+                  <tr><td>Link label</td><td>Instrument Sans Regular 16px, #D9D9D9, 2px after the icon</td><td><code>text/on-brand-muted</code></td></tr>
+                  <tr><td>Link icons</td><td>Briefcase, Image, Person, Folder &middot; 16 &times; 16, #D9D9D9</td><td>&mdash;</td></tr>
+                  <tr><td>Email tile</td><td>56 &times; 56 circle, #003D20, Mail icon 24 &times; 24</td><td><code>graphic/brand</code></td></tr>
+                  <tr><td>Menu tile (mobile)</td><td>36 &times; 36 circle, #003D20, three white 2px lines</td><td><code>icon/inverse</code></td></tr>
+                  <tr><td>Spacing</td><td>12px between the three shapes</td><td>&mdash;</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="docs-muted mt-2" style="font-size: 0.8125rem">Note: the nav labels in Figma use Instrument Sans 16px, not the <em>Labels/Nav Text</em> style (Inter 12px). The Typography inventory lists Nav Text as "previously unused".</p>
+
+            <h3>Code</h3>
+            <div class="docs-code"><pre><code>&lt;nav class="sds-nav" aria-label="Main"&gt;
+  &lt;a class="sds-nav-logo" href="index.html"&gt;&lt;img src="imgs/logo-nav.svg" width="56" height="56" alt="Alan Alcesto, home"&gt;&lt;/a&gt;
+  &lt;ul class="sds-nav-links"&gt;
+    &lt;li&gt;&lt;a href="work.html" aria-current="page"&gt;
+      &lt;span class="sds-nav-icon"&gt;&lt;img src="imgs/icons/briefcase.svg" alt=""&gt;&lt;/span&gt;work&lt;/a&gt;&lt;/li&gt;
+    &lt;!-- playground · about · cv --&gt;
+  &lt;/ul&gt;
+  &lt;a class="sds-nav-email" href="mailto:…"&gt;&lt;img src="imgs/icons/mail.svg" alt="Email"&gt;&lt;/a&gt;
+&lt;/nav&gt;</code></pre></div>
+
+            <h3>Accessibility</h3>
+            <ul class="docs-a11y">
+              <li><span class="badge">1.4.3</span><span>Light Gray on Forest Green is 8.81:1 for the link labels.</span></li>
+              <li><span class="badge">1.1.1</span><span>The logo and email tiles have no visible text, so their images need <code>alt</code> text ("home", "Email"). Link icons sit next to text, so they use <code>alt=""</code>.</span></li>
+              <li><span class="badge">4.1.2</span><span>The mobile menu tile is a <code>&lt;button&gt;</code> with <code>aria-expanded</code> and <code>aria-controls</code>. The links it reveals are not drawn in Figma, so they are a code-only addition.</span></li>
+            </ul>
+          </section>
+
+          <!-- =================================================== button -->
+          <section id="button" class="docs-block" aria-labelledby="button-title">
+            <p class="docs-eyebrow mb-1">Components &middot; 02 &middot; <code>button</code></p>
+            <h2 id="button-title" class="sds-h3">Button</h2>
+            <p class="docs-muted">Four Figma variants: a filled pill ("next case study") with its hover state, and a text link ("check out the live app &gt;") with its hover state.</p>
+
+            <h3>Live</h3>
+            <div class="docs-variant">
+              <div class="docs-variant-stage is-page flex-wrap gap-4">
+                <a class="btn btn-primary" href="#button">next case study</a>
+                <a class="btn btn-link" href="#button">check out the live app &gt;</a>
+              </div>
+              <div class="docs-variant-caption"><span>Hover them, or press Tab to see focus.</span></div>
+            </div>
+
+            <h3>Variants</h3>
+            <div class="row row-cols-1 row-cols-sm-2 g-3">
+              <div class="col"><div class="docs-variant"><div class="docs-variant-stage is-page"><span class="btn btn-primary is-default" aria-hidden="true">next case study</span></div><div class="docs-variant-caption"><code>Property 1=Default</code><span>142 &times; 35</span></div></div></div>
+              <div class="col"><div class="docs-variant"><div class="docs-variant-stage is-page"><span class="btn btn-primary is-hover" aria-hidden="true">next case study</span></div><div class="docs-variant-caption"><code>Property 1=button-over</code><span>Hover</span></div></div></div>
+              <div class="col"><div class="docs-variant"><div class="docs-variant-stage is-page"><span class="btn btn-link" aria-hidden="true">check out the live app &gt;</span></div><div class="docs-variant-caption"><code>Property 1=button-link</code><span>189 &times; 35</span></div></div></div>
+              <div class="col"><div class="docs-variant"><div class="docs-variant-stage is-page"><span class="btn btn-link is-hover" aria-hidden="true">check out the live app &gt;</span></div><div class="docs-variant-caption"><code>Property 1=button-link-hover</code><span>Hover</span></div></div></div>
+            </div>
+
+            <h3>Specs</h3>
+            <div class="table-responsive">
+              <table class="table docs-table">
+                <thead><tr><th scope="col">Property</th><th scope="col">Default &middot; button-over</th><th scope="col">button-link &middot; button-link-hover</th><th scope="col">Token</th></tr></thead>
+                <tbody>
+                  <tr><td>Font</td><td>Inter Regular 12px</td><td>Inter Regular 12px</td><td><code>Labels/Button Labels</code> &middot; <code>Labels/Link</code></td></tr>
+                  <tr><td>Text</td><td>#D9D9D9</td><td>#003D20 &rarr; #0A714E + underline</td><td><code>text/on-brand-muted</code> &middot; <code>text/link</code> &middot; <code>text/link-hover</code></td></tr>
+                  <tr><td>Background</td><td>#003D20 &rarr; #0A714E</td><td>none</td><td><code>action/primary</code> &middot; <code>action/primary-hover</code></td></tr>
+                  <tr><td>Padding</td><td colspan="2">10px top and bottom, 26px left and right</td><td>&mdash;</td></tr>
+                  <tr><td>Radius</td><td colspan="2">99px</td><td><code>--sds-radius-pill</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>Code</h3>
+            <div class="docs-code"><pre><code>&lt;a class="btn btn-primary" href="next.html"&gt;next case study&lt;/a&gt;
+&lt;a class="btn btn-link" href="https://…"&gt;check out the live app &amp;gt;&lt;/a&gt;</code></pre></div>
+
+            <h3>Accessibility</h3>
+            <ul class="docs-a11y">
+              <li><span class="badge">1.4.3</span><span>Light Gray on Forest Green (Default) is 8.81:1 and passes. Light Gray on Emerald Green (button-over) is 4.27:1, which is below the 4.5:1 that 12px text needs. Consider white hover text (6.03:1).</span></li>
+              <li><span class="badge">1.4.1</span><span>The link variant shows hover with an underline as well as a colour change.</span></li>
+              <li><span class="badge">2.5.8</span><span>Both variants are 35px tall, above the 24px minimum target size.</span></li>
+            </ul>
+          </section>
+
+          <!-- =================================================== chit -->
+          <section id="chit" class="docs-block" aria-labelledby="chit-title">
+            <p class="docs-eyebrow mb-1">Components &middot; 03 &middot; <code>chit</code></p>
+            <h2 id="chit-title" class="sds-h3">Chit</h2>
+            <p class="docs-muted">Small sunflower pills for the role, status, type and tools labels in the intro card. Hover adds a 1px black border.</p>
+
+            <h3>Variants</h3>
+            <div class="row row-cols-1 row-cols-sm-2 g-3">
+              <div class="col"><div class="docs-variant"><div class="docs-variant-stage is-page"><span class="sds-chit">chit</span></div><div class="docs-variant-caption"><code>Property 1=Default</code><span>38 &times; 16</span></div></div></div>
+              <div class="col"><div class="docs-variant"><div class="docs-variant-stage is-page"><span class="sds-chit is-hover">chit</span></div><div class="docs-variant-caption"><code>Property 1=chit-hover</code><span>1px black border</span></div></div></div>
+            </div>
+            <p class="docs-label mt-3 mb-2">In use (from the intro card)</p>
+            <div class="sds-chit-row">
+              <span class="sds-chit">Product Designer</span><span class="sds-chit">UX Researcher</span><span class="sds-chit">Shipped</span><span class="sds-chit">2026-2027</span><span class="sds-chit">B2B SaaS</span><span class="sds-chit">Design System</span><span class="sds-chit">Multi-Product</span><span class="sds-chit">Figma</span><span class="sds-chit">Codex</span><span class="sds-chit">Claude Code</span>
+            </div>
+
+            <h3>Specs</h3>
+            <div class="table-responsive">
+              <table class="table docs-table">
+                <thead><tr><th scope="col">Property</th><th scope="col">Value</th><th scope="col">Token</th></tr></thead>
+                <tbody>
+                  <tr><td>Font</td><td>Inter Light 10px, #1E1E1E</td><td><code>Labels/Chit Text</code> &middot; <code>text/body</code></td></tr>
+                  <tr><td>Background</td><td>#FFCE1B</td><td><code>surface/accent</code></td></tr>
+                  <tr><td>Padding &middot; radius</td><td>2px 10px &middot; 99px</td><td><code>--sds-radius-pill</code></td></tr>
+                  <tr><td>Gap between chits</td><td>2px</td><td><code>.sds-chit-row</code></td></tr>
+                  <tr><td>Hover</td><td>1px solid #000000 border</td><td><code>neutral/black</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>Code</h3>
+            <div class="docs-code"><pre><code>&lt;dd class="sds-chit-row"&gt;
+  &lt;span class="sds-chit"&gt;Product Designer&lt;/span&gt;
+  &lt;span class="sds-chit"&gt;UX Researcher&lt;/span&gt;
+&lt;/dd&gt;</code></pre></div>
+
+            <h3>Accessibility</h3>
+            <ul class="docs-a11y">
+              <li><span class="badge">1.4.3</span><span>Charcoal on Sunflower is 11.19:1, enough for the light 10px weight. Keep chits to one or two words.</span></li>
+              <li><span class="badge">2.5.8</span><span>Chits are 16px tall and only 2px apart, so they are labels, not buttons. If one becomes clickable, give it a 24px target.</span></li>
+            </ul>
+          </section>
+
+          <!-- =================================================== image-placeholder -->
+          <section id="image-placeholder" class="docs-block" aria-labelledby="placeholder-title">
+            <p class="docs-eyebrow mb-1">Components &middot; 04 &middot; <code>image-placeholder</code></p>
+            <h2 id="placeholder-title" class="sds-h3">Image placeholder</h2>
+            <p class="docs-muted">A light gray block with the word "placeholder" that holds space for images in the gallery and in each case-study section.</p>
+
+            <h3>Example</h3>
+            <div class="docs-variant">
+              <div class="docs-variant-stage is-page"><div class="sds-image-placeholder" style="max-width: 480px" role="img" aria-label="Image placeholder">placeholder</div></div>
+              <div class="docs-variant-caption"><code>image-placeholder</code><span>480 &times; 320</span></div>
+            </div>
+
+            <h3>Specs &amp; code</h3>
+            <div class="table-responsive mb-3">
+              <table class="table docs-table">
+                <tbody>
+                  <tr><td>Fill</td><td>#D9D9D9</td><td><code>surface/placeholder</code></td></tr>
+                  <tr><td>Label</td><td>"placeholder", Inter Light 10px, #1E1E1E, centred</td><td><code>Labels/Chit Text</code></td></tr>
+                  <tr><td>Radius &middot; padding</td><td>16px &middot; 0 24px</td><td>&mdash;</td></tr>
+                  <tr><td>Heights used</td><td>320 (gallery) &middot; 394 (sections, desktop) &middot; 299 / 207 on mobile</td><td>&mdash;</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="docs-code"><pre><code>&lt;div class="sds-image-placeholder" role="img" aria-label="Image placeholder"&gt;placeholder&lt;/div&gt;</code></pre></div>
+          </section>
+
+          <!-- =================================================== status-card -->
+          <section id="status-card" class="docs-block" aria-labelledby="status-title">
+            <p class="docs-eyebrow mb-1">Components &middot; 05 &middot; <code>status-card</code></p>
+            <h2 id="status-title" class="sds-h3">Status card</h2>
+            <p class="docs-muted">Three cream cards that tell the story in order: Problem, Solution, Results. Each has a sunflower icon circle with Frown, Smile or Check circle.</p>
+
+            <h3>Variants</h3>
+            <div class="docs-variant">
+              <div class="docs-variant-stage is-page" style="padding: 20px">
+                <div class="d-flex flex-wrap justify-content-center" style="gap: 20px">
+                  <article class="sds-status-card">
+                    <div class="sds-status-icon"><img src="./imgs/icons/frown.svg" width="44" height="44" alt="" /></div>
+                    <h3 class="sds-h3">Problem</h3>
+                    <p>UI decisions were constantly re-debated. The component library blocked progress instead of enabling it. Inconsistencies slowed down delivery.</p>
+                  </article>
+                  <article class="sds-status-card">
+                    <div class="sds-status-icon"><img src="./imgs/icons/smile.svg" width="44" height="44" alt="" /></div>
+                    <h3 class="sds-h3">Solution</h3>
+                    <p>UI decisions were constantly re-debated. The component library blocked progress instead of enabling it. Inconsistencies slowed down delivery.</p>
+                  </article>
+                  <article class="sds-status-card">
+                    <div class="sds-status-icon"><img src="./imgs/icons/check-circle.svg" width="36.8333" height="36.8333" alt="" /></div>
+                    <h3 class="sds-h3">Results</h3>
+                    <p>UI decisions were constantly re-debated. The component library blocked progress instead of enabling it. Inconsistencies slowed down delivery.</p>
+                  </article>
+                </div>
+              </div>
+              <div class="docs-variant-caption"><code>Property 1=Default</code> &middot; <code>status-card-solution</code> &middot; <code>status-card-results</code><span>205 &times; 245</span></div>
+            </div>
+
+            <h3>Specs</h3>
+            <div class="table-responsive">
+              <table class="table docs-table">
+                <thead><tr><th scope="col">Property</th><th scope="col">Value</th><th scope="col">Token</th></tr></thead>
+                <tbody>
+                  <tr><td>Background</td><td>#EDE4D9</td><td><code>surface/card</code></td></tr>
+                  <tr><td>Size</td><td>205px wide (min), 245px max height; full width and 200px tall on mobile</td><td>&mdash;</td></tr>
+                  <tr><td>Padding &middot; radius</td><td>24px &middot; 24px</td><td>&mdash;</td></tr>
+                  <tr><td>Icon circle</td><td>60 &times; 60, #FFCE1B, radius 30px</td><td><code>surface/accent</code></td></tr>
+                  <tr><td>Icon</td><td>Frown (Default) &middot; Smile (solution) 48px &middot; Check circle (results) 40px, #1E1E1E</td><td><code>icon/default</code></td></tr>
+                  <tr><td>Title</td><td>Geist Bold 36px, #003D20</td><td><code>Headers/H3</code></td></tr>
+                  <tr><td>Body</td><td>Inter Regular 12px, #1E1E1E</td><td><code>Paragraph/Paragraph</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>Code</h3>
+            <div class="docs-code"><pre><code>&lt;div class="sds-status-cards"&gt;
+  &lt;article class="sds-status-card"&gt;
+    &lt;div class="sds-status-icon"&gt;&lt;img src="imgs/icons/frown.svg" width="44" height="44" alt=""&gt;&lt;/div&gt;
+    &lt;h2 class="sds-h3"&gt;Problem&lt;/h2&gt;
+    &lt;p&gt;UI decisions were constantly re-debated. …&lt;/p&gt;
+  &lt;/article&gt;
+  &lt;!-- Solution: smile.svg · Results: check-circle.svg --&gt;
+&lt;/div&gt;</code></pre></div>
+
+            <h3>Accessibility</h3>
+            <ul class="docs-a11y">
+              <li><span class="badge">1.4.3</span><span>Forest Green on Cream is 9.89:1 and Charcoal on Cream is 13.26:1.</span></li>
+              <li><span class="badge">1.1.1</span><span>The icons repeat the card title, so they are decorative (<code>alt=""</code>).</span></li>
+            </ul>
+          </section>
+
+          <!-- =================================================== intro -->
+          <section id="intro" class="docs-block" aria-labelledby="intro-title">
+            <p class="docs-eyebrow mb-1">Components &middot; 06 &middot; <code>intro-desktop</code></p>
+            <h2 id="intro-title" class="sds-h3">Intro card</h2>
+            <p class="docs-muted">A cream panel that opens the case study: an "intro" heading and paragraph on the left, and a project overview (Role, Status, Type, Tools) made of chit rows on the right. On mobile the two parts stack.</p>
+
+            <h3>Variants</h3>
+            <div class="docs-variant mb-3">
+              <div class="docs-variant-stage is-page">
+                <section class="sds-intro w-100" aria-label="Intro example">
+                  <div class="sds-intro-text">
+                    <h3 class="sds-h3">intro</h3>
+                    <p>decision problem. Every small UI choice turned into a discussion.<br />Patterns weren’t shared. Components couldn’t evolve.<br />“If it’s not in the library, we don’t build it.”<br />So teams either argued or built one-offs. Delivery slowed down.<br />And a lot of small UX fixes never made it onto the roadmap.<br />I pushed to rebuild the system in a way people would actually use.</p>
+                  </div>
+                  <dl class="sds-overview">
+                    <div><dt class="sds-h5 is-brand">Role</dt><dd class="sds-chit-row"><span class="sds-chit">Product Designer</span><span class="sds-chit">UX Researcher</span></dd></div>
+                    <div><dt class="sds-h5 is-brand">Status</dt><dd class="sds-chit-row"><span class="sds-chit">Shipped</span><span class="sds-chit">2026-2027</span></dd></div>
+                    <div><dt class="sds-h5">Type</dt><dd class="sds-chit-row"><span class="sds-chit">B2B SaaS</span><span class="sds-chit">Design System</span><span class="sds-chit">Multi-Product</span></dd></div>
+                    <div><dt class="sds-h5">Tools</dt><dd class="sds-chit-row"><span class="sds-chit">Figma</span><span class="sds-chit">Codex</span><span class="sds-chit">Claude Code</span></dd></div>
+                  </dl>
+                </section>
+              </div>
+              <div class="docs-variant-caption"><code>Property 1=Default</code><span>776 &times; 290 &middot; desktop and tablet</span></div>
+            </div>
+            <div class="docs-variant" style="max-width: 26rem">
+              <div class="docs-variant-stage is-page">
+                <section class="sds-intro is-mobile w-100" aria-label="Intro mobile example">
+                  <div class="sds-intro-text">
+                    <h3 class="sds-h3">intro</h3>
+                    <p>decision problem. Every small UI choice turned into a discussion. Patterns weren’t shared. Components couldn’t evolve. “If it’s not in the library, we don’t build it.” So teams either argued or built one-offs. Delivery slowed down. And a lot of small UX fixes never made it onto the roadmap. I pushed to rebuild the system in a way people would actually use.</p>
+                  </div>
+                  <dl class="sds-overview">
+                    <div><dt class="sds-h5 is-brand">Role</dt><dd class="sds-chit-row"><span class="sds-chit">Product Designer</span><span class="sds-chit">UX Researcher</span></dd></div>
+                    <div><dt class="sds-h5 is-brand">Status</dt><dd class="sds-chit-row"><span class="sds-chit">Shipped</span><span class="sds-chit">2026-2027</span></dd></div>
+                    <div><dt class="sds-h5">Type</dt><dd class="sds-chit-row"><span class="sds-chit">B2B SaaS</span><span class="sds-chit">Design System</span><span class="sds-chit">Multi-Product</span></dd></div>
+                    <div><dt class="sds-h5">Tools</dt><dd class="sds-chit-row"><span class="sds-chit">Figma</span><span class="sds-chit">Codex</span><span class="sds-chit">Claude Code</span></dd></div>
+                  </dl>
+                </section>
+              </div>
+              <div class="docs-variant-caption"><code>Property 1=intro-mobile</code><span>Stacked</span></div>
+            </div>
+
+            <h3>Specs</h3>
+            <div class="table-responsive">
+              <table class="table docs-table">
+                <thead><tr><th scope="col">Part</th><th scope="col">Value</th><th scope="col">Token</th></tr></thead>
+                <tbody>
+                  <tr><td>Panel</td><td>#EDE4D9, radius 8px, padding 14px 24px</td><td><code>surface/card</code></td></tr>
+                  <tr><td>Intro text</td><td>431px wide: "intro" Geist Bold 36px #003D20, then Inter 12px #000000</td><td><code>Headers/H3</code> &middot; <code>Paragraph/Paragraph</code></td></tr>
+                  <tr><td>Project overview</td><td>194px wide, 16px between groups, 2px under each heading</td><td>&mdash;</td></tr>
+                  <tr><td>Group headings</td><td>Geist SemiBold 24px: Role and Status #003D20, Type and Tools #000000</td><td><code>Headers/H5</code></td></tr>
+                  <tr><td>Chits</td><td>Role, Status, Type and Tools values</td><td><code>chit</code></td></tr>
+                  <tr><td>Mobile</td><td>Text above the overview, each with 8px padding</td><td>&mdash;</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>Accessibility</h3>
+            <ul class="docs-a11y">
+              <li><span class="badge">1.3.1</span><span>The overview is a description list: each heading is a <code>&lt;dt&gt;</code> and its chits are the <code>&lt;dd&gt;</code>.</span></li>
+            </ul>
+          </section>
+
+          <!-- =================================================== results-stats -->
+          <section id="results-stats" class="docs-block" aria-labelledby="stats-title">
+            <p class="docs-eyebrow mb-1">Components &middot; 07 &middot; <code>results-stats</code></p>
+            <h2 id="stats-title" class="sds-h3">Results stats</h2>
+            <p class="docs-muted">A cream bar of four results in forest green. On mobile it becomes a 2 &times; 2 grid and the labels switch to <em>Labels/Stats Text Moble</em>.</p>
+
+            <h3>Example</h3>
+            <div class="docs-variant mb-3">
+              <div class="docs-variant-stage is-page">
+                <dl class="sds-results-stats w-100">
+                  <div class="sds-stat"><dt class="sds-stat-label">adoption rate</dt><dd class="sds-stat-value">100%</dd></div>
+                  <div class="sds-stat"><dt class="sds-stat-label">average stars</dt><dd class="sds-stat-value">4.7</dd></div>
+                  <div class="sds-stat"><dt class="sds-stat-label">downtime per month</dt><dd class="sds-stat-value">0.2%</dd></div>
+                  <div class="sds-stat"><dt class="sds-stat-label">open defects</dt><dd class="sds-stat-value">0</dd></div>
+                </dl>
+              </div>
+              <div class="docs-variant-caption"><code>results-stats</code><span>888 &times; 95</span></div>
+            </div>
+            <div class="docs-variant" style="max-width: 26rem">
+              <div class="docs-variant-stage is-page">
+                <dl class="sds-results-stats is-mobile w-100">
+                  <div class="sds-stat"><dt class="sds-stat-label">adoption rate</dt><dd class="sds-stat-value">100%</dd></div>
+                  <div class="sds-stat"><dt class="sds-stat-label">average stars</dt><dd class="sds-stat-value">4.7</dd></div>
+                  <div class="sds-stat"><dt class="sds-stat-label">downtime per month</dt><dd class="sds-stat-value">0.2%</dd></div>
+                  <div class="sds-stat"><dt class="sds-stat-label">open defects</dt><dd class="sds-stat-value">0</dd></div>
+                </dl>
+              </div>
+              <div class="docs-variant-caption"><code>results-stats</code><span>Mobile &middot; 378 &times; 257</span></div>
+            </div>
+
+            <h3>Specs</h3>
+            <div class="table-responsive">
+              <table class="table docs-table">
+                <thead><tr><th scope="col">Property</th><th scope="col">Value</th><th scope="col">Token</th></tr></thead>
+                <tbody>
+                  <tr><td>Background</td><td>#EDE4D9, radius 16px, padding 8px 16px (16px 8px on mobile)</td><td><code>surface/card</code></td></tr>
+                  <tr><td>Value</td><td>Geist Bold 48 / 48px, #003D20</td><td><code>Headers/H2</code></td></tr>
+                  <tr><td>Label</td><td>Geist SemiBold 24px (desktop) &middot; Inter SemiBold 16px (mobile), #003D20</td><td><code>Headers/H5</code> &middot; <code>Labels/Stats Text Moble</code></td></tr>
+                  <tr><td>Layout</td><td>Space-between row, wraps with 24px row gap</td><td>&mdash;</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>Code</h3>
+            <div class="docs-code"><pre><code>&lt;dl class="sds-results-stats"&gt;
+  &lt;div class="sds-stat"&gt;&lt;dt class="sds-stat-label"&gt;adoption rate&lt;/dt&gt;&lt;dd class="sds-stat-value"&gt;100%&lt;/dd&gt;&lt;/div&gt;
+  &lt;div class="sds-stat"&gt;&lt;dt class="sds-stat-label"&gt;average stars&lt;/dt&gt;&lt;dd class="sds-stat-value"&gt;4.7&lt;/dd&gt;&lt;/div&gt;
+  &lt;div class="sds-stat"&gt;&lt;dt class="sds-stat-label"&gt;downtime per month&lt;/dt&gt;&lt;dd class="sds-stat-value"&gt;0.2%&lt;/dd&gt;&lt;/div&gt;
+  &lt;div class="sds-stat"&gt;&lt;dt class="sds-stat-label"&gt;open defects&lt;/dt&gt;&lt;dd class="sds-stat-value"&gt;0&lt;/dd&gt;&lt;/div&gt;
+&lt;/dl&gt;</code></pre></div>
+
+            <h3>Accessibility</h3>
+            <ul class="docs-a11y">
+              <li><span class="badge">1.3.1</span><span>A description list keeps each value paired with its label. The value is drawn above the label with CSS, so screen readers still hear the label first.</span></li>
+              <li><span class="badge">1.4.3</span><span>Forest Green on Cream is 9.89:1.</span></li>
+            </ul>
+          </section>
+
+          <!-- =================================================== footer -->
+          <section id="footer" class="docs-block" aria-labelledby="footer-title">
+            <p class="docs-eyebrow mb-1">Components &middot; 08 &middot; <code>footer</code></p>
+            <h2 id="footer-title" class="sds-h3">Footer</h2>
+            <p class="docs-muted">An emerald bar with the footer logo, Alan's name and email address, centred.</p>
+
+            <h3>Example</h3>
+            <div class="docs-variant">
+              <div class="docs-variant-stage is-flush">
+                <div class="sds-footer">
+                  <img src="./imgs/logo-footer.svg" width="112" height="93" alt="Alan Alcesto logo" />
+                  <div><p>Alan Alcesto</p><p><a href="mailto:aalcesto@depaul.edu">aalcesto@depaul.edu</a></p></div>
+                </div>
+              </div>
+              <div class="docs-variant-caption"><code>footer</code><span>888 &times; 84</span></div>
+            </div>
+
+            <h3>Specs</h3>
+            <div class="table-responsive">
+              <table class="table docs-table">
+                <tbody>
+                  <tr><td>Background</td><td>#0A714E, 84px tall, 20px side padding</td><td><code>surface/brand</code></td></tr>
+                  <tr><td>Logo</td><td>Footer logo, 112 &times; 93</td><td>&mdash;</td></tr>
+                  <tr><td>Text</td><td>Inter Light 10px, #FFFFFF, centred</td><td><code>Labels/Chit Text</code> &middot; <code>text/inverse</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>Code</h3>
+            <div class="docs-code"><pre><code>&lt;footer class="sds-footer"&gt;
+  &lt;img src="imgs/logo-footer.svg" width="112" height="93" alt="Alan Alcesto logo"&gt;
+  &lt;div&gt;
+    &lt;p&gt;Alan Alcesto&lt;/p&gt;
+    &lt;p&gt;&lt;a href="mailto:aalcesto@depaul.edu"&gt;aalcesto@depaul.edu&lt;/a&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre></div>
+
+            <h3>Accessibility</h3>
+            <ul class="docs-a11y">
+              <li><span class="badge">1.4.3</span><span>White on Emerald Green is 6.03:1, which passes for the 10px text, but 10px is very small to read.</span></li>
+            </ul>
+          </section>
+
+          <!-- =================================================== testimonial-card -->
+          <section id="testimonial-card" class="docs-block" aria-labelledby="testimonial-title">
+            <p class="docs-eyebrow mb-1">Components &middot; 09 &middot; <code>testemonial-card</code></p>
+            <h2 id="testimonial-title" class="sds-h3">Testimonial card</h2>
+            <p class="docs-muted">A tan bar with a forest-green closing quote mark and the quote in white.</p>
+
+            <h3>Example</h3>
+            <div class="docs-variant">
+              <div class="docs-variant-stage is-page">
+                <figure class="sds-testimonial-card w-100">
+                  <div class="sds-quotation" aria-hidden="true">”</div>
+                  <blockquote>Here is a testimonial statement from a random person I’ve never met before</blockquote>
+                </figure>
+              </div>
+              <div class="docs-variant-caption"><code>testemonial-card</code><span>888 &times; 96 &middot; name as spelled in Figma</span></div>
+            </div>
+
+            <h3>Specs</h3>
+            <div class="table-responsive">
+              <table class="table docs-table">
+                <thead><tr><th scope="col">Property</th><th scope="col">Value</th><th scope="col">Token</th></tr></thead>
+                <tbody>
+                  <tr><td>Background</td><td>#BC9A71, radius 16px, padding 8px 16px, 96px min height</td><td><code>surface/testimonial</code></td></tr>
+                  <tr><td>Quote mark</td><td>” Inter Bold 64px, #003D20</td><td><code>Labels/Quotation</code></td></tr>
+                  <tr><td>Quote</td><td>Geist SemiBold 24px, #FFFFFF</td><td><code>Headers/H5</code> &middot; <code>text/inverse</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>Code</h3>
+            <div class="docs-code"><pre><code>&lt;figure class="sds-testimonial-card"&gt;
+  &lt;div class="sds-quotation" aria-hidden="true"&gt;”&lt;/div&gt;
+  &lt;blockquote&gt;Here is a testimonial statement from a random person I’ve never met before&lt;/blockquote&gt;
+&lt;/figure&gt;</code></pre></div>
+
+            <h3>Accessibility</h3>
+            <ul class="docs-a11y">
+              <li><span class="badge">1.4.3</span><span>White on Tan is 2.63:1. That fails even the 3:1 minimum for large text. Black on Tan (8.00:1) or Forest Green on Tan (4.74:1) would pass.</span></li>
+              <li><span class="badge">1.3.1</span><span>The decorative quote mark is hidden from screen readers.</span></li>
+            </ul>
+          </section>
+
+          <nav class="docs-pager row g-3" aria-label="Pager">
+            <div class="col-6"><a href="./foundations.html"><small>Previous</small><strong>Foundations</strong></a></div>
+            <div class="col-6 text-end"><a href="./patterns.html"><small>Next</small><strong>Page Patterns</strong></a></div>
+          </nav>
+        </main>
+      </div>
+    </div>
+
+    <footer class="sds-footer">
+      <img src="./imgs/logo-footer.svg" width="112" height="93" alt="Alan Alcesto logo" />
+      <div><p>Alan Alcesto</p><p><a href="mailto:aalcesto@depaul.edu">aalcesto@depaul.edu</a></p></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/docs.js"></script>
+  </body>
+</html>

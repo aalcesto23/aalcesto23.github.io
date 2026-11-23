@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design System Case Study · Alan Alcesto</title>
+    <link rel="icon" href="../imgs/favicon.svg" type="image/svg+xml" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&family=Inter:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Instrument+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/design_system.css" />
+  </head>
+  <body>
+    <!-- nav-bar -->
+    <header class="sds-case-study sds-case-study-header">
+      <!-- Property 1=Default (≥ 768px) -->
+      <nav class="sds-nav d-none d-md-flex" aria-label="Main">
+        <a class="sds-nav-logo" href="#top"><img src="../imgs/logo-nav.svg" width="56" height="56" alt="Alan Alcesto, home" /></a>
+        <ul class="sds-nav-links">
+          <li><a href="#top" aria-current="page"><span class="sds-nav-icon"><img src="../imgs/icons/briefcase.svg" width="14.9333" height="13.6" alt="" /></span>work</a></li>
+          <li><a href="#"><span class="sds-nav-icon"><img src="../imgs/icons/image.svg" width="14" height="14" alt="" /></span>playground</a></li>
+          <li><a href="#"><span class="sds-nav-icon"><img src="../imgs/icons/person.svg" width="10.6667" height="10.6667" alt="" /></span>about</a></li>
+          <li><a href="#"><span class="sds-nav-icon"><img src="../imgs/icons/folder.svg" width="14.9333" height="13.6" alt="" /></span>cv</a></li>
+        </ul>
+        <a class="sds-nav-email" href="mailto:aalcesto@depaul.edu"><img src="../imgs/icons/mail.svg" width="21.6" height="17.6" alt="Email Alan" /></a>
+      </nav>
+      <!-- Property 1=Mobile (< 768px) -->
+      <nav class="sds-nav is-mobile d-md-none" aria-label="Main">
+        <a class="sds-nav-logo" href="#top"><img src="../imgs/logo-nav.svg" width="56" height="56" alt="Alan Alcesto, home" /></a>
+        <button class="sds-nav-menu" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Menu">
+          <img src="../imgs/icons/menu.svg" width="24" height="10" alt="" />
+        </button>
+        <div class="collapse sds-nav-drawer" id="mobileNav">
+          <ul class="sds-nav-links">
+            <li><a href="#top" aria-current="page"><span class="sds-nav-icon"><img src="../imgs/icons/briefcase.svg" width="14.9333" height="13.6" alt="" /></span>work</a></li>
+            <li><a href="#"><span class="sds-nav-icon"><img src="../imgs/icons/image.svg" width="14" height="14" alt="" /></span>playground</a></li>
+            <li><a href="#"><span class="sds-nav-icon"><img src="../imgs/icons/person.svg" width="10.6667" height="10.6667" alt="" /></span>about</a></li>
+            <li><a href="#"><span class="sds-nav-icon"><img src="../imgs/icons/folder.svg" width="14.9333" height="13.6" alt="" /></span>cv</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top" class="sds-case-study sds-case-study-body">
+      <!-- case-study-title + button (button-link) -->
+      <h1 class="sds-h1 sds-case-study-title">A design system that stopped UI debates and helped 4 product teams ship faster</h1>
+      <div class="sds-align-end">
+        <a class="btn btn-link" href="#">check out the live app &gt;</a>
+      </div>
+
+      <!-- intro (Property 1=Default / intro-mobile) -->
+      <section class="sds-intro" aria-labelledby="intro-title">
+        <div class="sds-intro-text">
+          <h2 id="intro-title" class="sds-h3">intro</h2>
+          <p>
+            decision problem. Every small UI choice turned into a discussion.<br />
+            Patterns weren’t shared. Components couldn’t evolve.<br />
+            “If it’s not in the library, we don’t build it.”<br />
+            So teams either argued or built one-offs. Delivery slowed down.<br />
+            And a lot of small UX fixes never made it onto the roadmap.<br />
+            I pushed to rebuild the system in a way people would actually use.
+          </p>
+          <p>
+            decision problem. Every small UI choice turned into a discussion.<br />
+            Patterns weren’t shared. Components couldn’t evolve.<br />
+            “If it’s not in the library, we don’t build it.”<br />
+            So teams either argued or built one-offs. Delivery slowed down.<br />
+            And a lot of small UX fixes never made it onto the roadmap.<br />
+            I pushed to rebuild the system in a way people would actually use.
+          </p>
+        </div>
+        <dl class="sds-overview">
+          <div>
+            <dt class="sds-h5 is-brand">Role</dt>
+            <dd class="sds-chit-row"><span class="sds-chit">Product Designer</span><span class="sds-chit">UX Researcher</span></dd>
+          </div>
+          <div>
+            <dt class="sds-h5 is-brand">Status</dt>
+            <dd class="sds-chit-row"><span class="sds-chit">Shipped</span><span class="sds-chit">2026-2027</span></dd>
+          </div>
+          <div>
+            <dt class="sds-h5">Type</dt>
+            <dd class="sds-chit-row"><span class="sds-chit">B2B SaaS</span><span class="sds-chit">Design System</span><span class="sds-chit">Multi-Product</span></dd>
+          </div>
+          <div>
+            <dt class="sds-h5">Tools</dt>
+            <dd class="sds-chit-row"><span class="sds-chit">Figma</span><span class="sds-chit">Codex</span><span class="sds-chit">Claude Code</span></dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- status-cards -->
+      <div class="sds-status-cards">
+        <article class="sds-status-card">
+          <div class="sds-status-icon"><img src="../imgs/icons/frown.svg" width="44" height="44" alt="" /></div>
+          <h2 class="sds-h3">Problem</h2>
+          <p>UI decisions were constantly re-debated. The component library blocked progress instead of enabling it. Inconsistencies slowed down delivery.</p>
+        </article>
+        <article class="sds-status-card">
+          <div class="sds-status-icon"><img src="../imgs/icons/smile.svg" width="44" height="44" alt="" /></div>
+          <h2 class="sds-h3">Solution</h2>
+          <p>UI decisions were constantly re-debated. The component library blocked progress instead of enabling it. Inconsistencies slowed down delivery.</p>
+        </article>
+        <article class="sds-status-card">
+          <div class="sds-status-icon"><img src="../imgs/icons/check-circle.svg" width="36.8333" height="36.8333" alt="" /></div>
+          <h2 class="sds-h3">Results</h2>
+          <p>UI decisions were constantly re-debated. The component library blocked progress instead of enabling it. Inconsistencies slowed down delivery.</p>
+        </article>
+      </div>
+
+      <!-- image-gallery -->
+      <div class="sds-gallery">
+        <div class="sds-image-placeholder" role="img" aria-label="Image placeholder">placeholder</div>
+        <div class="sds-image-placeholder" role="img" aria-label="Image placeholder">placeholder</div>
+        <div class="sds-image-placeholder" role="img" aria-label="Image placeholder">placeholder</div>
+        <div class="sds-image-placeholder" role="img" aria-label="Image placeholder">placeholder</div>
+      </div>
+
+      <!-- section 1 -->
+      <section class="sds-section" aria-labelledby="s1-name">
+        <h2 id="s1-name" class="sds-h5 sds-section-name">discovery</h2>
+        <p class="sds-h2 sds-section-title">It was not just me. User app reviews and flow analysis confirmed the problem.</p>
+        <figure class="sds-testimonial-card">
+          <div class="sds-quotation" aria-hidden="true">”</div>
+          <blockquote>Here is a testimonial statement from a random person I’ve never met before</blockquote>
+        </figure>
+        <div class="sds-section-paragraph">
+          <p>Office ipsum you must be muted. While buy-in fured better centric every reach discussions. Let about chime impact believe floor cloud baked. Comes enable didn't way window all catching. Hour eco-system low conversation ourselves usabiltiy. Obviously technologically solutions helicopter enable contribution. Q1 ensure horse data kimono game create banner users room. Hop company of it's give read hurting horse practices. Those high-level ensure long paradigm six manager hurting. Algorithm engagement clean shark elephant bed job guys. Minimize idea mindfulness lift believe didn't low-hanging.</p>
+          <p>Long boil high-level kpis win we've red-flag. Ui shift club here us. Opportunity for production 2 functional data wider incentivize. Take prioritize down t-shaped please that's eco-system language. Incompetent cross when relaxation post hard launch pretend. Dog net pain native going work forward options. Usabiltiy responsible native you way we chime rehydrate. Cross-pollination awareness today vec people incompetent let files. Floor field fastworks email awareness based who's open. Hands tiger launch no-brainer hard conversation first-order procrastinating management. With submit incompetent proceduralize and search community turn.</p>
+        </div>
+        <div class="sds-image-placeholder" role="img" aria-label="Image placeholder">placeholder</div>
+      </section>
+
+      <!-- section 2 -->
+      <section class="sds-section" aria-labelledby="s2-name">
+        <h2 id="s2-name" class="sds-h5 sds-section-name">prototyping</h2>
+        <p class="sds-h2 sds-section-title">It was not just me. User app reviews and flow analysis confirmed the problem.</p>
+        <figure class="sds-testimonial-card">
+          <div class="sds-quotation" aria-hidden="true">”</div>
+          <blockquote>Here is a testimonial statement from a random person I’ve never met before</blockquote>
+        </figure>
+        <div class="sds-section-paragraph">
+          <p>Office ipsum you must be muted. While buy-in fured better centric every reach discussions. Let about chime impact believe floor cloud baked. Comes enable didn't way window all catching. Hour eco-system low conversation ourselves usabiltiy. Obviously technologically solutions helicopter enable contribution. Q1 ensure horse data kimono game create banner users room. Hop company of it's give read hurting horse practices. Those high-level ensure long paradigm six manager hurting. Algorithm engagement clean shark elephant bed job guys. Minimize idea mindfulness lift believe didn't low-hanging.</p>
+          <p>Long boil high-level kpis win we've red-flag. Ui shift club here us. Opportunity for production 2 functional data wider incentivize. Take prioritize down t-shaped please that's eco-system language. Incompetent cross when relaxation post hard launch pretend. Dog net pain native going work forward options. Usabiltiy responsible native you way we chime rehydrate. Cross-pollination awareness today vec people incompetent let files. Floor field fastworks email awareness based who's open. Hands tiger launch no-brainer hard conversation first-order procrastinating management. With submit incompetent proceduralize and search community turn.</p>
+        </div>
+        <div class="sds-image-placeholder" role="img" aria-label="Image placeholder">placeholder</div>
+      </section>
+
+      <!-- section 3 -->
+      <section class="sds-section" aria-labelledby="s3-name">
+        <h2 id="s3-name" class="sds-h5 sds-section-name">validation</h2>
+        <p class="sds-h2 sds-section-title">It was not just me. User app reviews and flow analysis confirmed the problem.</p>
+        <figure class="sds-testimonial-card">
+          <div class="sds-quotation" aria-hidden="true">”</div>
+          <blockquote>Here is a testimonial statement from a random person I’ve never met before</blockquote>
+        </figure>
+        <div class="sds-section-paragraph">
+          <p>Office ipsum you must be muted. While buy-in fured better centric every reach discussions. Let about chime impact believe floor cloud baked. Comes enable didn't way window all catching. Hour eco-system low conversation ourselves usabiltiy. Obviously technologically solutions helicopter enable contribution. Q1 ensure horse data kimono game create banner users room. Hop company of it's give read hurting horse practices. Those high-level ensure long paradigm six manager hurting. Algorithm engagement clean shark elephant bed job guys. Minimize idea mindfulness lift believe didn't low-hanging.</p>
+          <p>Long boil high-level kpis win we've red-flag. Ui shift club here us. Opportunity for production 2 functional data wider incentivize. Take prioritize down t-shaped please that's eco-system language. Incompetent cross when relaxation post hard launch pretend. Dog net pain native going work forward options. Usabiltiy responsible native you way we chime rehydrate. Cross-pollination awareness today vec people incompetent let files. Floor field fastworks email awareness based who's open. Hands tiger launch no-brainer hard conversation first-order procrastinating management. With submit incompetent proceduralize and search community turn.</p>
+        </div>
+        <div class="sds-image-placeholder" role="img" aria-label="Image placeholder">placeholder</div>
+      </section>
+
+      <!-- section 4 · results-stats -->
+      <section class="sds-section" aria-labelledby="s4-name">
+        <h2 id="s4-name" class="sds-h5 sds-section-name">results</h2>
+        <dl class="sds-results-stats">
+          <div class="sds-stat"><dt class="sds-stat-label">adoption rate</dt><dd class="sds-stat-value">100%</dd></div>
+          <div class="sds-stat"><dt class="sds-stat-label">average stars</dt><dd class="sds-stat-value">4.7</dd></div>
+          <div class="sds-stat"><dt class="sds-stat-label">downtime per month</dt><dd class="sds-stat-value">0.2%</dd></div>
+          <div class="sds-stat"><dt class="sds-stat-label">open defects</dt><dd class="sds-stat-value">0</dd></div>
+        </dl>
+      </section>
+
+      <!-- button (Property 1=Default) -->
+      <div class="sds-align-end is-full">
+        <a class="btn btn-primary" href="#">next case study</a>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="sds-footer">
+      <img src="../imgs/logo-footer.svg" width="112" height="93" alt="Alan Alcesto logo" />
+      <div>
+        <p>Alan Alcesto</p>
+        <p><a href="mailto:aalcesto@depaul.edu">aalcesto@depaul.edu</a></p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

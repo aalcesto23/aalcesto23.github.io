@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Patterns · Simple Design System</title>
+    <link rel="icon" href="./imgs/favicon.svg" type="image/svg+xml" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Instrument+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/design_system.css" />
+    <link rel="stylesheet" href="./css/docs.css" />
+  </head>
+  <body>
+    <a class="docs-skip" href="#main">Skip to content</a>
+
+    <nav class="navbar navbar-expand-md sds-navbar sticky-top" aria-label="Main">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html"><img class="sds-logo" src="./imgs/logo-nav.svg" width="56" height="56" alt="" /> Simple Design System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sds-nav-menu d-inline-grid" style="width: 36px; height: 36px"><img src="./imgs/icons/menu.svg" width="24" height="10" alt="" /></span>
+        </button>
+        <div class="collapse navbar-collapse" id="siteNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="./foundations.html">01 Foundations</a></li>
+            <li class="nav-item"><a class="nav-link" href="./components.html">02 Components</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="./patterns.html">03 Page Patterns</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="docs-page-header pb-5">
+      <div class="container">
+        <p class="docs-label mb-2" style="color: var(--sds-surface-accent)">03 &middot; Page Patterns</p>
+        <h1 class="sds-h2 mb-3">Case study page</h1>
+        <p class="lead mb-0">The case study from the Figma <em>Designs</em> page, built only from the components and tokens in this system. Layout values come from <em>Designs Specs &amp; Grids</em>.</p>
+      </div>
+    </header>
+
+    <main id="main" class="container docs-layout">
+      <section class="docs-block" aria-labelledby="preview-title">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+          <h2 id="preview-title" class="sds-h4 mb-0">Live preview</h2>
+          <div class="d-flex flex-wrap align-items-center gap-3">
+            <div class="btn-group docs-device-toggle" role="group" aria-label="Preview width">
+              <input type="radio" class="btn-check" name="device" id="dDesktop" data-device-width="100%" data-target="deviceFrame" checked />
+              <label class="btn btn-sm" for="dDesktop"><i class="bi bi-display" aria-hidden="true"></i> Desktop</label>
+              <input type="radio" class="btn-check" name="device" id="dTablet" data-device-width="834px" data-target="deviceFrame" />
+              <label class="btn btn-sm" for="dTablet"><i class="bi bi-tablet" aria-hidden="true"></i> Tablet</label>
+              <input type="radio" class="btn-check" name="device" id="dPhone" data-device-width="402px" data-target="deviceFrame" />
+              <label class="btn btn-sm" for="dPhone"><i class="bi bi-phone" aria-hidden="true"></i> Phone</label>
+            </div>
+            <a class="btn btn-link" href="./patterns/case-study.html">Open full page <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="docs-device-frame" id="deviceFrame">
+          <div class="docs-device-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+          <iframe src="./patterns/case-study.html" title="Case study page preview" loading="lazy"></iframe>
+        </div>
+      </section>
+
+      <section class="docs-block" aria-labelledby="used-title">
+        <h2 id="used-title" class="sds-h4">Components used</h2>
+        <div class="table-responsive">
+          <table class="table docs-table">
+            <thead><tr><th scope="col">Component</th><th scope="col">Variant</th><th scope="col">Where</th></tr></thead>
+            <tbody>
+              <tr><td><a href="./components.html#nav-bar">nav-bar</a></td><td>Default &middot; Mobile</td><td>Top of page</td></tr>
+              <tr><td><a href="./components.html#button">button</a></td><td>button-link &middot; Default</td><td>"check out the live app &gt;" under the title &middot; "next case study" at the end</td></tr>
+              <tr><td><a href="./components.html#intro">intro</a></td><td>Default &middot; intro-mobile</td><td>Intro text and project overview</td></tr>
+              <tr><td><a href="./components.html#chit">chit</a></td><td>Default</td><td>Role, Status, Type and Tools in the intro</td></tr>
+              <tr><td><a href="./components.html#status-card">status-card</a></td><td>Default &middot; solution &middot; results</td><td>Problem, Solution, Results</td></tr>
+              <tr><td><a href="./components.html#image-placeholder">image-placeholder</a></td><td>&mdash;</td><td>4-image gallery &middot; one per section</td></tr>
+              <tr><td><a href="./components.html#testimonial-card">testemonial-card</a></td><td>&mdash;</td><td>Sections 1&ndash;3 (discovery, prototyping, validation)</td></tr>
+              <tr><td><a href="./components.html#results-stats">results-stats</a></td><td>&mdash;</td><td>Section 4 (results)</td></tr>
+              <tr><td><a href="./components.html#footer">footer</a></td><td>&mdash;</td><td>Bottom of page</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="docs-block" aria-labelledby="layout-title">
+        <h2 id="layout-title" class="sds-h4">Layout specs</h2>
+        <div class="table-responsive">
+          <table class="table docs-table">
+            <thead><tr><th scope="col"></th><th scope="col">Desktop (1440 frame)</th><th scope="col">Tablet (834 frame)</th><th scope="col">Mobile (402 frame)</th></tr></thead>
+            <tbody>
+              <tr><td>Content width</td><td>960px column, 936px content</td><td>810px</td><td>378px (12px gutters)</td></tr>
+              <tr><td>Nav bar</td><td>Default, 56px tall</td><td>Default, 56px tall</td><td>Mobile, 36px tall</td></tr>
+              <tr><td>Title</td><td>H1 72px</td><td>H1 72px</td><td>H2 48px</td></tr>
+              <tr><td>Space between blocks</td><td>28px</td><td>24px</td><td>31px</td></tr>
+              <tr><td>Intro</td><td>Text left &middot; overview right</td><td>Text left &middot; overview right</td><td>Stacked</td></tr>
+              <tr><td>Status cards</td><td>3-up, 205px each, spaced apart</td><td>3-up, 205px each</td><td>Stacked full width, 16px apart</td></tr>
+              <tr><td>Gallery</td><td>Full &middot; two halves &middot; full; 320px tall, 12px rows, 24px columns</td><td>Same, 320px tall</td><td>Same, 299px tall, 8px columns</td></tr>
+              <tr><td>Sections 1&ndash;3</td><td>16px between parts; section title H2; image 394px</td><td>Section title H2</td><td>Section title H3; image 207px</td></tr>
+              <tr><td>Results stats</td><td>4 across</td><td>4 across</td><td>2 &times; 2, Stats Text Mobile labels</td></tr>
+              <tr><td>Buttons</td><td>Right-aligned</td><td>Right-aligned</td><td>Link: right half &middot; Default: full width</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <nav class="docs-pager row g-3" aria-label="Pager">
+        <div class="col-6"><a href="./components.html"><small>Previous</small><strong>Components</strong></a></div>
+        <div class="col-6 text-end"><a href="./index.html"><small>Back to</small><strong>Overview</strong></a></div>
+      </nav>
+    </main>
+
+    <footer class="sds-footer">
+      <img src="./imgs/logo-footer.svg" width="112" height="93" alt="Alan Alcesto logo" />
+      <div><p>Alan Alcesto</p><p><a href="mailto:aalcesto@depaul.edu">aalcesto@depaul.edu</a></p></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/docs.js"></script>
+  </body>
+</html>

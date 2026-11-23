@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundations · Simple Design System</title>
+    <link rel="icon" href="./imgs/favicon.svg" type="image/svg+xml" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Instrument+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/design_system.css" />
+    <link rel="stylesheet" href="./css/docs.css" />
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#docsToc" data-bs-root-margin="0px 0px -60%">
+    <a class="docs-skip" href="#main">Skip to content</a>
+
+    <nav class="navbar navbar-expand-md sds-navbar sticky-top" aria-label="Main">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html"><img class="sds-logo" src="./imgs/logo-nav.svg" width="56" height="56" alt="" /> Simple Design System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sds-nav-menu d-inline-grid" style="width: 36px; height: 36px"><img src="./imgs/icons/menu.svg" width="24" height="10" alt="" /></span>
+        </button>
+        <div class="collapse navbar-collapse" id="siteNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="./foundations.html">01 Foundations</a></li>
+            <li class="nav-item"><a class="nav-link" href="./components.html">02 Components</a></li>
+            <li class="nav-item"><a class="nav-link" href="./patterns.html">03 Page Patterns</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="docs-page-header">
+      <div class="container">
+        <p class="docs-label mb-2" style="color: var(--sds-surface-accent)">01 &middot; Foundations</p>
+        <h1 class="sds-h2 mb-3">Foundations</h1>
+        <p class="lead mb-0">Color, type, logos and icons from the Figma <em>Foundation &amp; Components</em> page. Components never use raw hex values; they reference these tokens.</p>
+        <nav class="docs-subnav" aria-label="Foundations sections">
+          <a href="#color">Color</a>
+          <a href="#typography">Typography</a>
+          <a href="#logos">Logos &amp; iconography</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container docs-layout">
+      <div class="row g-5">
+        <aside class="col-lg-3 d-none d-lg-block">
+          <nav id="docsToc" class="docs-sidebar nav flex-column" aria-label="On this page">
+            <p class="docs-label mb-2 ps-2">On this page</p>
+            <a class="nav-link" href="#color">Color</a>
+            <a class="nav-link ps-4" href="#primitives">Swatches</a>
+            <a class="nav-link ps-4" href="#semantic">Semantic tokens</a>
+            <a class="nav-link ps-4" href="#pairings">Contrast</a>
+            <a class="nav-link ps-4" href="#color-css">CSS</a>
+            <a class="nav-link" href="#typography">Typography</a>
+            <a class="nav-link ps-4" href="#families">Families</a>
+            <a class="nav-link ps-4" href="#type-scale">Text styles</a>
+            <a class="nav-link ps-4" href="#type-css">CSS</a>
+            <a class="nav-link" href="#logos">Logos &amp; iconography</a>
+            <a class="nav-link ps-4" href="#logo-specimens">Logos</a>
+            <a class="nav-link ps-4" href="#nav-icons">Navigation icons</a>
+            <a class="nav-link ps-4" href="#status-icons">Status icons</a>
+          </nav>
+        </aside>
+
+        <main id="main" class="col-lg-9">
+          <!-- ================= Color ================= -->
+          <section id="color" class="docs-block" aria-labelledby="color-title">
+            <p class="docs-eyebrow mb-1">Foundations &middot; 01</p>
+            <h2 id="color-title" class="sds-h3">Color</h2>
+            <p class="docs-muted">
+              10 primitive colors &middot; 20 purpose-based semantic tokens. Collections: <strong>Color &middot; Primitives</strong>
+              (base values) &rarr; <strong>Color &middot; Semantic</strong> (use-case aliases). Under each swatch: primitive name, semantic names, and usage.
+            </p>
+
+            <h3 id="primitives">Brand &amp; accent</h3>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mb-4">
+              <div class="col"><div class="docs-swatch"><div class="docs-swatch-chip" style="background: #003d20"></div><div class="docs-swatch-body"><strong>Forest green &middot; #003D20</strong><code>brand/forest-green</code><br /><code>action/primary</code> &middot; <code>text/link</code> &middot; <code>graphic/brand</code><br />Primary button fills, link labels, and green vector artwork.</div></div></div>
+              <div class="col"><div class="docs-swatch"><div class="docs-swatch-chip" style="background: #0a714e"></div><div class="docs-swatch-body"><strong>Emerald green &middot; #0A714E</strong><code>brand/emerald-green</code><br /><code>action/primary-hover</code> &middot; <code>text/link-hover</code> &middot; <code>surface/brand</code> &middot; <code>text/brand</code><br />Button/link hover, footer, logo tiles, and section labels.</div></div></div>
+              <div class="col"><div class="docs-swatch"><div class="docs-swatch-chip" style="background: #ffce1b"></div><div class="docs-swatch-body"><strong>Sunflower yellow &middot; #FFCE1B</strong><code>accent/sunflower-yellow</code><br /><code>surface/accent</code><br />Role and status chips, and status-card icon tiles.</div></div></div>
+            </div>
+            <h3>Neutral</h3>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3 mb-4">
+              <div class="col"><div class="docs-swatch"><div class="docs-swatch-chip" style="background: #000000"></div><div class="docs-swatch-body"><strong>Black &middot; #000000</strong><code>neutral/black</code><br /><code>text/primary</code> &middot; <code>graphic/primary</code><br />Vector artwork and primary text.</div></div></div>
+              <div class="col"><div class="docs-swatch"><div class="docs-swatch-chip" style="background: #1e1e1e"></div><div class="docs-swatch-body"><strong>Charcoal &middot; #1E1E1E</strong><code>neutral/charcoal</code><br /><code>text/body</code> &middot; <code>icon/default</code><br />Body copy, chip labels, and icon strokes.</div></div></div>
+              <div class="col"><div class="docs-swatch"><div class="docs-swatch-chip" style="background: #d9d9d9"></div><div class="docs-swatch-body"><strong>Light gray &middot; #D9D9D9</strong><code>neutral/light-gray</code><br /><code>surface/placeholder</code> &middot; <code>text/on-brand-muted</code><br />Image placeholders, navigation, and button labels.</div></div></div>
+              <div class="col"><div class="docs-swatch"><div class="docs-swatch-chip" style="background: #ffffff; box-shadow: inset 0 0 0 1px #d9d9d9"></div><div class="docs-swatch-body"><strong>White &middot; #FFFFFF</strong><code>neutral/white</code><br /><code>text/inverse</code> &middot; <code>icon/inverse</code> &middot; <code>surface/canvas</code><br />Inverse testimonial/footer text and navigation icon lines.</div></div></div>
+            </div>
+            <h3>Warm surfaces</h3>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              <div class="col"><div class="docs-swatch"><div class="docs-swatch-chip" style="background: #ddcbb6"></div><div class="docs-swatch-body"><strong>Sand &middot; #DDCBB6</strong><code>warm/sand</code><br /><code>surface/page</code><br />Mobile, tablet, and desktop screen backgrounds.</div></div></div>
+              <div class="col"><div class="docs-swatch"><div class="docs-swatch-chip" style="background: #ede4d9"></div><div class="docs-swatch-body"><strong>Cream &middot; #EDE4D9</strong><code>warm/cream</code><br /><code>surface/card</code><br />Intro panels, status cards, and results-stat surfaces.</div></div></div>
+              <div class="col"><div class="docs-swatch"><div class="docs-swatch-chip" style="background: #bc9a71"></div><div class="docs-swatch-body"><strong>Tan &middot; #BC9A71</strong><code>warm/tan</code><br /><code>surface/testimonial</code><br />Testimonial card backgrounds.</div></div></div>
+            </div>
+
+            <h3 id="semantic">Semantic tokens</h3>
+            <p class="docs-muted">Each semantic token is an alias of a primitive in Figma, and maps to a CSS variable (and, where one exists, a Bootstrap variable).</p>
+            <div class="table-responsive">
+              <table class="table docs-table">
+                <thead><tr><th scope="col">Figma token</th><th scope="col">Primitive</th><th scope="col">CSS variable</th><th scope="col">Bootstrap</th></tr></thead>
+                <tbody>
+                  <tr><td><code>action/primary</code></td><td><span class="docs-dot" style="background: #003d20"></span>forest-green</td><td><code>--sds-action-primary</code></td><td><code>--bs-btn-bg</code></td></tr>
+                  <tr><td><code>action/primary-hover</code></td><td><span class="docs-dot" style="background: #0a714e"></span>emerald-green</td><td><code>--sds-action-primary-hover</code></td><td><code>--bs-btn-hover-bg</code></td></tr>
+                  <tr><td><code>text/primary</code></td><td><span class="docs-dot" style="background: #000"></span>black</td><td><code>--sds-text-primary</code></td><td><code>--bs-emphasis-color</code></td></tr>
+                  <tr><td><code>text/body</code></td><td><span class="docs-dot" style="background: #1e1e1e"></span>charcoal</td><td><code>--sds-text-body</code></td><td><code>--bs-body-color</code></td></tr>
+                  <tr><td><code>text/link</code></td><td><span class="docs-dot" style="background: #003d20"></span>forest-green</td><td><code>--sds-text-link</code></td><td><code>--bs-link-color</code></td></tr>
+                  <tr><td><code>text/link-hover</code></td><td><span class="docs-dot" style="background: #0a714e"></span>emerald-green</td><td><code>--sds-text-link-hover</code></td><td><code>--bs-link-hover-color</code></td></tr>
+                  <tr><td><code>text/brand</code></td><td><span class="docs-dot" style="background: #0a714e"></span>emerald-green</td><td><code>--sds-text-brand</code></td><td>&mdash;</td></tr>
+                  <tr><td><code>text/inverse</code></td><td><span class="docs-dot" style="background: #fff"></span>white</td><td><code>--sds-text-inverse</code></td><td>&mdash;</td></tr>
+                  <tr><td><code>text/on-brand-muted</code></td><td><span class="docs-dot" style="background: #d9d9d9"></span>light-gray</td><td><code>--sds-text-on-brand-muted</code></td><td><code>--bs-navbar-color</code></td></tr>
+                  <tr><td><code>graphic/brand</code></td><td><span class="docs-dot" style="background: #003d20"></span>forest-green</td><td><code>--sds-graphic-brand</code></td><td>&mdash;</td></tr>
+                  <tr><td><code>graphic/primary</code></td><td><span class="docs-dot" style="background: #000"></span>black</td><td><code>--sds-graphic-primary</code></td><td>&mdash;</td></tr>
+                  <tr><td><code>icon/default</code></td><td><span class="docs-dot" style="background: #1e1e1e"></span>charcoal</td><td><code>--sds-icon-default</code></td><td>&mdash;</td></tr>
+                  <tr><td><code>icon/inverse</code></td><td><span class="docs-dot" style="background: #fff"></span>white</td><td><code>--sds-icon-inverse</code></td><td>&mdash;</td></tr>
+                  <tr><td><code>surface/page</code></td><td><span class="docs-dot" style="background: #ddcbb6"></span>sand</td><td><code>--sds-surface-page</code></td><td><code>--bs-body-bg</code></td></tr>
+                  <tr><td><code>surface/card</code></td><td><span class="docs-dot" style="background: #ede4d9"></span>cream</td><td><code>--sds-surface-card</code></td><td>&mdash;</td></tr>
+                  <tr><td><code>surface/canvas</code></td><td><span class="docs-dot" style="background: #fff"></span>white</td><td><code>--sds-surface-canvas</code></td><td>&mdash;</td></tr>
+                  <tr><td><code>surface/brand</code></td><td><span class="docs-dot" style="background: #0a714e"></span>emerald-green</td><td><code>--sds-surface-brand</code></td><td>&mdash;</td></tr>
+                  <tr><td><code>surface/accent</code></td><td><span class="docs-dot" style="background: #ffce1b"></span>sunflower-yellow</td><td><code>--sds-surface-accent</code></td><td>&mdash;</td></tr>
+                  <tr><td><code>surface/testimonial</code></td><td><span class="docs-dot" style="background: #bc9a71"></span>tan</td><td><code>--sds-surface-testimonial</code></td><td>&mdash;</td></tr>
+                  <tr><td><code>surface/placeholder</code></td><td><span class="docs-dot" style="background: #d9d9d9"></span>light-gray</td><td><code>--sds-surface-placeholder</code></td><td>&mdash;</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 id="pairings">Contrast of the pairings used in the designs</h3>
+            <p class="docs-muted">WCAG 2.2 contrast ratios. Body text needs 4.5:1 (AA); large text (24px+, or 18.66px+ bold) and UI parts need 3:1.</p>
+            <div class="table-responsive">
+              <table class="table docs-table">
+                <thead><tr><th scope="col">Sample</th><th scope="col">Pairing</th><th scope="col">Ratio</th><th scope="col">Result</th><th scope="col">Where Figma uses it</th></tr></thead>
+                <tbody>
+                  <tr><td><span class="docs-pair" style="background: #ede4d9; color: #1e1e1e">Aa</span></td><td>Charcoal on Cream</td><td>13.26:1</td><td><span class="badge docs-pass">AAA</span></td><td>Status-card body text</td></tr>
+                  <tr><td><span class="docs-pair" style="background: #ffce1b; color: #1e1e1e">Aa</span></td><td>Charcoal on Sunflower</td><td>11.19:1</td><td><span class="badge docs-pass">AAA</span></td><td>Chit labels, status icons</td></tr>
+                  <tr><td><span class="docs-pair" style="background: #ede4d9; color: #003d20">Aa</span></td><td>Forest Green on Cream</td><td>9.89:1</td><td><span class="badge docs-pass">AAA</span></td><td>Card titles, intro headings, results stats</td></tr>
+                  <tr><td><span class="docs-pair" style="background: #003d20; color: #d9d9d9">Aa</span></td><td>Light Gray on Forest Green</td><td>8.81:1</td><td><span class="badge docs-pass">AAA</span></td><td>Nav links, button label</td></tr>
+                  <tr><td><span class="docs-pair" style="background: #ddcbb6; color: #003d20">Aa</span></td><td>Forest Green on Sand</td><td>7.87:1</td><td><span class="badge docs-pass">AAA</span></td><td>Case-study title, section titles, link button</td></tr>
+                  <tr><td><span class="docs-pair" style="background: #0a714e; color: #fff">Aa</span></td><td>White on Emerald Green</td><td>6.03:1</td><td><span class="badge docs-pass">AA</span></td><td>Footer text</td></tr>
+                  <tr><td><span class="docs-pair" style="background: #0a714e; color: #d9d9d9">Aa</span></td><td>Light Gray on Emerald Green</td><td>4.27:1</td><td><span class="badge docs-large">Large only</span></td><td>Button hover label (12px, so it falls short)</td></tr>
+                  <tr><td><span class="docs-pair" style="background: #ddcbb6; color: #0a714e">Aa</span></td><td>Emerald Green on Sand</td><td>3.81:1</td><td><span class="badge docs-large">Large only</span></td><td>Section names (24px, passes as large text); link hover (12px, falls short)</td></tr>
+                  <tr><td><span class="docs-pair" style="background: #bc9a71; color: #fff">Aa</span></td><td>White on Tan</td><td>2.63:1</td><td><span class="badge docs-fail">Fails</span></td><td>Testimonial quote</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="row g-3 mt-2">
+              <div class="col-md-6"><div class="docs-usage is-do"><strong><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Do</strong>Use the semantic token for the job (for example <code>surface/card</code> for cream panels), not the raw hex.</div></div>
+              <div class="col-md-6"><div class="docs-usage is-dont"><strong><i class="bi bi-x-circle-fill" aria-hidden="true"></i> Don't</strong>Don't set small text in white on Tan or Light Gray on Emerald. Both fall below 4.5:1.</div></div>
+            </div>
+
+            <h3 id="color-css">CSS</h3>
+            <p class="docs-muted">How the three layers connect in <code>css/design_system.css</code>.</p>
+            <div class="docs-code"><pre><code>:root {
+  /* 1 · Primitive */
+  --aa-forest-green: #003d20;
+  --aa-emerald-green: #0a714e;
+
+  /* 2 · Semantic token (alias) */
+  --sds-action-primary: var(--aa-forest-green);
+  --sds-action-primary-hover: var(--aa-emerald-green);
+  --sds-surface-page: var(--aa-sand);
+
+  /* 3 · Bootstrap mapping */
+  --bs-primary: #003d20;
+  --bs-body-bg: var(--sds-surface-page);
+  --bs-link-color: var(--sds-text-link);
+}</code></pre></div>
+          </section>
+
+          <!-- ================= Typography ================= -->
+          <section id="typography" class="docs-block" aria-labelledby="type-title">
+            <p class="docs-eyebrow mb-1">Foundations &middot; 02</p>
+            <h2 id="type-title" class="sds-h3">Typography</h2>
+            <p class="docs-muted">14 defined text styles. Geist sets the headers (&minus;6% tracking); Inter handles labels, paragraphs and stats. Uses are based on the existing designs; roles for unused styles are inferred.</p>
+
+            <h3 id="families">Families</h3>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="docs-variant">
+                  <div class="docs-variant-stage" style="min-height: 9rem"><span style="font-family: var(--sds-font-heading); font-weight: 700; font-size: 4rem; letter-spacing: -0.06em; color: #000">Aa</span></div>
+                  <div class="docs-variant-caption"><code>Geist</code><span>Bold 700 &middot; SemiBold 600</span></div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="docs-variant">
+                  <div class="docs-variant-stage" style="min-height: 9rem"><span style="font-family: var(--sds-font-body); font-weight: 400; font-size: 4rem; color: #000">Aa</span></div>
+                  <div class="docs-variant-caption"><code>Inter</code><span>Light 300 &middot; Regular 400 &middot; Italic &middot; SemiBold 600 &middot; Bold 700</span></div>
+                </div>
+              </div>
+            </div>
+            <p class="docs-muted mt-3" style="font-size: 0.8125rem">The nav-bar link labels also use <strong>Instrument Sans</strong> Regular 16px. This is set directly on the nav-bar, not as a text style.</p>
+
+            <h3 id="type-scale">Text styles</h3>
+            <div class="docs-type-row"><div class="docs-type-meta"><strong>Headers/H1 - Header 1</strong>Geist Bold &middot; 72 / 72 &middot; &minus;6%<br /><code>.sds-h1</code></div><p class="sds-h1">Large case-study headlines and primary titles.</p></div>
+            <div class="docs-type-row"><div class="docs-type-meta"><strong>Headers/H2 - Header 2</strong>Geist Bold &middot; 48 / 48 &middot; &minus;6%<br /><code>.sds-h2</code></div><p class="sds-h2">Case-study headlines and prominent statistic values.</p></div>
+            <div class="docs-type-row"><div class="docs-type-meta"><strong>Headers/H3 - Header 3</strong>Geist Bold &middot; 36 / auto &middot; &minus;6%<br /><code>.sds-h3</code></div><p class="sds-h3">Section and card headings: Intro, Problem, Solution.</p></div>
+            <div class="docs-type-row"><div class="docs-type-meta"><strong>Headers/H4 - Header 4</strong>Geist SemiBold &middot; 32 / auto &middot; &minus;6%<br /><code>.sds-h4</code></div><p class="sds-h4">Intermediate headings — previously unused.</p></div>
+            <div class="docs-type-row"><div class="docs-type-meta"><strong>Headers/H5 - Header 5</strong>Geist SemiBold &middot; 24 / auto &middot; &minus;6%<br /><code>.sds-h5</code></div><p class="sds-h5">Metadata headings, statistic descriptions, and testimonial text.</p></div>
+            <div class="docs-type-row"><div class="docs-type-meta"><strong>Labels/Button Labels</strong>Inter Regular &middot; 12 / auto</div><p style="font-size: 12px">Button and call-to-action labels.</p></div>
+            <div class="docs-type-row"><div class="docs-type-meta"><strong>Labels/Nav Text</strong>Inter Regular &middot; 12 / auto</div><p style="font-size: 12px">Navigation labels — previously unused.</p></div>
+            <div class="docs-type-row"><div class="docs-type-meta"><strong>Labels/Chit Text</strong>Inter Light &middot; 10 / auto<br /><code>.sds-chit-text</code></div><p class="sds-chit-text">Small chips/tags, role and status labels, footer details, and placeholder labels.</p></div>
+            <div class="docs-type-row"><div class="docs-type-meta"><strong>Labels/Quotation</strong>Inter Bold &middot; 64 / auto<br /><code>.sds-quotation</code></div><p class="sds-quotation" style="color: var(--aa-forest-green)">”</p></div>
+            <div class="docs-type-row"><div class="docs-type-meta"><strong>Labels/Link</strong>Inter Regular &middot; 12 / auto &middot; underlined</div><p style="font-size: 12px; text-decoration: underline">Hover-state link label.</p></div>
+            <div class="docs-type-row"><div class="docs-type-meta"><strong>Labels/Stats Text Moble</strong>Inter SemiBold &middot; 16 / auto<br /><code>.sds-stats-text</code></div><p class="sds-stats-text">Mobile statistic descriptions.</p></div>
+            <div class="docs-type-row"><div class="docs-type-meta"><strong>Paragraph/Paragraph</strong>Inter Regular &middot; 12 / auto<br /><code>.sds-paragraph</code></div><p class="sds-paragraph">Body copy, introductions, and card descriptions.</p></div>
+            <div class="docs-type-row"><div class="docs-type-meta"><strong>Paragraph/Paragraph Italic</strong>Inter Italic &middot; 12 / auto<br /><code>.sds-paragraph-italic</code></div><p class="sds-paragraph-italic">Emphasized body copy — previously unused.</p></div>
+            <div class="docs-type-row"><div class="docs-type-meta"><strong>Stats Text - Mobile</strong>Inter SemiBold &middot; 16 / auto</div><p class="sds-stats-text">Mobile statistic text — previously unused.</p></div>
+
+            <h3 id="type-css">CSS</h3>
+            <div class="docs-code"><pre><code>&lt;link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:ital,wght@0,300..700;1,400&amp;family=Instrument+Sans&amp;display=swap" rel="stylesheet"&gt;
+
+:root {
+  --sds-font-heading: "Geist", system-ui, sans-serif;
+  --sds-font-body: "Inter", system-ui, sans-serif;
+  --sds-font-nav: "Instrument Sans", "Inter", system-ui, sans-serif;
+  --sds-tracking-heading: -0.06em;
+  --bs-body-font-family: var(--sds-font-body);
+}
+.sds-h1 { font: 700 72px/1 var(--sds-font-heading); letter-spacing: -0.06em; }</code></pre></div>
+          </section>
+
+          <!-- ================= Logos & iconography ================= -->
+          <section id="logos" class="docs-block" aria-labelledby="logos-title">
+            <p class="docs-eyebrow mb-1">Foundations &middot; 03</p>
+            <h2 id="logos-title" class="sds-h3">Logos &amp; iconography</h2>
+            <p class="docs-muted">Existing artwork used across desktop, tablet, and mobile designs. Specimens preserve the original geometry, colors, and displayed sizes. The files are exported from Figma into <code>imgs/</code>.</p>
+
+            <h3 id="logo-specimens">Logos</h3>
+            <div class="row row-cols-1 row-cols-md-3 g-3">
+              <div class="col"><div class="docs-variant"><div class="docs-variant-stage is-page" style="min-height: 10rem"><span class="sds-nav-logo"><img src="./imgs/logo-nav.svg" width="56" height="56" alt="Desktop navigation logo" /></span></div><div class="docs-variant-caption"><code>Desktop navigation logo</code><span>56 &times; 56 px &middot; Desktop and tablet home link. White mark in an emerald circular tile.</span></div></div></div>
+              <div class="col"><div class="docs-variant"><div class="docs-variant-stage is-page" style="min-height: 10rem"><img src="./imgs/logo-nav.svg" width="36" height="36" alt="Mobile navigation logo" /></div><div class="docs-variant-caption"><code>Mobile navigation logo</code><span>36 &times; 36 px &middot; Compact mobile home link. Same brand mark at its mobile size.</span></div></div></div>
+              <div class="col"><div class="docs-variant"><div class="docs-variant-stage" style="min-height: 10rem; background: var(--sds-surface-brand)"><img src="./imgs/logo-footer.svg" width="112" height="93" alt="Footer logo" /></div><div class="docs-variant-caption"><code>Footer logo</code><span>112 &times; 93 px &middot; Footer brand mark. Shown on emerald, matching the footer.</span></div></div></div>
+            </div>
+
+            <h3 id="nav-icons">Navigation icons</h3>
+            <div class="row row-cols-2 row-cols-md-3 g-3">
+              <div class="col"><div class="docs-variant"><div class="docs-variant-stage" style="background: var(--sds-graphic-brand)"><span class="sds-nav-icon"><img src="./imgs/icons/briefcase.svg" width="14.9333" height="13.6" alt="" /></span></div><div class="docs-variant-caption"><code>Briefcase</code><span>16 &times; 16 px &middot; Work navigation.</span></div></div></div>
+              <div class="col"><div class="docs-variant"><div class="docs-variant-stage" style="background: var(--sds-graphic-brand)"><span class="sds-nav-icon"><img src="./imgs/icons/image.svg" width="14" height="14" alt="" /></span></div><div class="docs-variant-caption"><code>Image</code><span>16 &times; 16 px &middot; Playground navigation.</span></div></div></div>
+              <div class="col"><div class="docs-variant"><div class="docs-variant-stage" style="background: var(--sds-graphic-brand)"><span class="sds-nav-icon"><img src="./imgs/icons/person.svg" width="10.6667" height="10.6667" alt="" /></span></div><div class="docs-variant-caption"><code>Person</code><span>16 &times; 16 px &middot; About navigation.</span></div></div></div>
+              <div class="col"><div class="docs-variant"><div class="docs-variant-stage" style="background: var(--sds-graphic-brand)"><span class="sds-nav-icon"><img src="./imgs/icons/folder.svg" width="14.9333" height="13.6" alt="" /></span></div><div class="docs-variant-caption"><code>Folder</code><span>16 &times; 16 px &middot; CV navigation.</span></div></div></div>
+              <div class="col"><div class="docs-variant"><div class="docs-variant-stage" style="background: var(--sds-graphic-brand)"><img src="./imgs/icons/mail.svg" width="21.6" height="17.6" alt="" /></div><div class="docs-variant-caption"><code>Mail</code><span>24 &times; 24 px &middot; Email contact action.</span></div></div></div>
+              <div class="col"><div class="docs-variant"><div class="docs-variant-stage" style="background: var(--sds-graphic-brand)"><span class="sds-nav-menu d-inline-grid" style="width: 36px; height: 36px"><img src="./imgs/icons/menu.svg" width="24" height="10" alt="" /></span></div><div class="docs-variant-caption"><code>Menu</code><span>36 &times; 36 px &middot; Mobile navigation menu.</span></div></div></div>
+            </div>
+
+            <h3 id="status-icons">Status icons</h3>
+            <div class="row row-cols-1 row-cols-md-3 g-3">
+              <div class="col"><div class="docs-variant"><div class="docs-variant-stage" style="background: var(--sds-surface-accent)"><img src="./imgs/icons/frown.svg" width="44" height="44" alt="" /></div><div class="docs-variant-caption"><code>Frown</code><span>48 &times; 48 px &middot; Problem card. Signals the challenge or pain point.</span></div></div></div>
+              <div class="col"><div class="docs-variant"><div class="docs-variant-stage" style="background: var(--sds-surface-accent)"><img src="./imgs/icons/smile.svg" width="44" height="44" alt="" /></div><div class="docs-variant-caption"><code>Smile</code><span>48 &times; 48 px &middot; Solution card. Signals the proposed improvement.</span></div></div></div>
+              <div class="col"><div class="docs-variant"><div class="docs-variant-stage" style="background: var(--sds-surface-accent)"><img src="./imgs/icons/check-circle.svg" width="36.8333" height="36.8333" alt="" /></div><div class="docs-variant-caption"><code>Check circle</code><span>40 &times; 40 px &middot; Results card. Signals completion and outcomes.</span></div></div></div>
+            </div>
+
+            <h3>Usage notes</h3>
+            <ul class="docs-muted" style="font-size: 0.9375rem">
+              <li>Use the existing artwork rather than redrawing it. Navigation glyphs use light gray on forest green; the mobile menu uses white.</li>
+              <li>Status glyphs use charcoal on yellow. The different icon sizes shown above are intentional sizes observed in the designs.</li>
+              <li>The three logo specimens show two navigation sizes and one footer treatment of the same brand mark.</li>
+            </ul>
+          </section>
+
+          <nav class="docs-pager row g-3" aria-label="Pager">
+            <div class="col-6"><a href="./index.html"><small>Previous</small><strong>Overview</strong></a></div>
+            <div class="col-6 text-end"><a href="./components.html"><small>Next</small><strong>Components</strong></a></div>
+          </nav>
+        </main>
+      </div>
+    </div>
+
+    <footer class="sds-footer">
+      <img src="./imgs/logo-footer.svg" width="112" height="93" alt="Alan Alcesto logo" />
+      <div><p>Alan Alcesto</p><p><a href="mailto:aalcesto@depaul.edu">aalcesto@depaul.edu</a></p></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/docs.js"></script>
+  </body>
+</html>
